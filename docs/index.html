@@ -2,69 +2,549 @@
 <html lang="es-Es">
 <head>
   <meta charset="UTF-8">
+  <!---//
   <link href="//fonts.googleapis.com/css?family=Chelsea Market&subset=latin" rel="stylesheet" type="text/css">
+  //--->
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <script src="https://kit.fontawesome.com/6b6c40cd1a.js" crossorigin="anonymous"></script>
+<title>El Tiet taver teca - taverna gastronomica en Barcelona</title>
 <style>
 * {
- font-family: 'Chelsea Market', sans-serif;
+ /*font-family: 'Chelsea Market', sans-serif;*/
+ font-family: "Avenir Next", "Avenir", sans-serif;
 }
-</style>
-<style>
+
   *{margin:0;padding:0;box-sizing: border-box;}
-  body {
-    color: white;
-    background:black;
-    margin:5%;
-    font-size: 30px;
+  body{margin:0 5%; background:black;}
+  body,section,div,p {
+    color: rgb(227, 211, 211);
+   
+    font-size:4vw;
+    
   }
+
+  h1,h2,h3{font-weight: normal;}
+  h2{font-size:9vw}
+
+  a.discreet,a.button{color: rgb(227, 211, 211);text-decoration: none;}
+  a.discreet.u{display: inline-block;border-bottom: 3px dashed rgb(227, 211, 211);}
+  a.button{opacity:.7;display:inline-block;vertical-align: middle;padding:20px;background-color:#780e00;border-radius: 30px;}
   
-  logo,logo img{display:block;background: white;width:100%;height:100%}
-  coords{display:block;margin-top:20px;line-height: 90px;opacity:.6}
-  button{
-    width:100%;font-size: 50px;
-    border-radius:50px;
-    border: 2px solid white;
-    padding:7px 3px;
-    margin:20px 0;
-  color: white;
-  background:black}
-  menu,section{margin-top:120px;display: block;position: relative;}
-  menu a{
-    display:inline-block;
-    text-align: center;
-    text-decoration: none;
-    color:white;
-    width:44%;font-size: 50px;
-    border-radius:50px;
-    border: 2px solid white;
-    padding:17px 13px;
-    margin:2% ;
-  }
-  desc{display: block;font-size: 50px;}
+  logo img{background: white}
+  /* Hack i found to avoid the white border caused by the image */
+  logo{position:relative;width:20vw;height:20vw;overflow: hidden;}
+  logo img{position:absolute;weight:120%;height:120%;left:-10%;top:-10%}
+
+#lang{padding :20px 0;text-align: right;opacity:.6;}
+
+header,section{display: block;/* font-size:35px */}
+
+header {
+  width: 720px;
+  height: 720px;
+  position: relative;
+  margin: 0 -5%;
+}
+  
+
+header {
+  width: 100vw;
+  height: 100vw;
+  margin-bottom:100px;
+}
+
+header video{
+  width:100%;
+  height:100%;
+}
+
+
+header .fa-star,header .fa-fa-star-half-alt{color:#fbba25}
+
+header .caption {
+  position: absolute;
+  display:flex;
+  align-items:center;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+header .caption .text{
+  margin-left:40px;
+}
+
+header .caption .text .reviews{
+  margin-top:15px
+}
+
+section{margin-bottom:140px;}
+section .fas{margin-right:20px}
+
+section h2{margin-bottom:40px;color:#780e00}
+
+#address .fa-external-link-alt{margin-left:12px}
+#address .call, #address .mail{margin-top:50px;margin-right:20px;/*font-size:37px*/}
+#social .button{font-size: 60px;display: block;margin-bottom: 50px;}
+#theend{text-align: center;padding: 200px 0}
+#story p{margin-bottom:2vw}
+
+.menu-section{margin-bottom:10vw;margin-top:15vw}
+.menu-section h3{font-size: 8vw;color:#780e00;margin-bottom:5vw}
+.menu-item{display: flex;padding-bottom:3vw;margin-bottom:3vw;border-bottom: 2px dotted white;}
+.item-desc{flex-grow: 4}
+.item-name{font-weight: 500;}
+.item-details{line-height:3.5vw;opacity:.7}
+.item-price{font-size: 1.4vw;padding-top:1.6vw}
 </style>
 
 </head>
 <body>
-<logo>
-  <img src="assets/img/logo.svg"/>
 
-</logo>
+<div id="lang">
+CAT - ESP - EN - FR
+</div>
+<header>
+<video autoplay muted loop id="myVideo">
+  <source src="assets/vid/el-tiet-presentation-bg.mp4" type="video/mp4">
+</video>
 
+
+<div class="caption">
+  <logo>
+    <img src="assets/img/logo.svg"/>
+  </logo>
+  <div class="text">
+  <h1>Bienvenido al Tiet!</h1>
+  <p>Taverna gastronomica</p>
+  <p class="reviews">4,4 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 
+    <a target="_blank" class="discreet" href="https://g.co/kgs/s7Y23S">362 reseñas <i class="fas fa-external-link-alt"></i></a></p>
+</div>
+</div> 
+</header>
+
+
+<section id="modalities">Restaurante - Takeaway - Delivery</section>
+<section id="address">
 <coords>
-  <symbol id="lnr-map-marker" viewBox="0 0 1024 1024"><title>map-marker</title><path class="path1" d="M512 1024c-7.856 0-15.277-3.606-20.13-9.784-2.931-3.73-72.587-92.864-143.229-224.51-41.581-77.491-74.742-153.568-98.565-226.118-30.043-91.499-45.277-177.758-45.277-256.387 0-169.39 137.81-307.2 307.2-307.2s307.2 137.81 307.2 307.2c0 78.629-15.234 164.888-45.278 256.386-23.822 72.55-56.984 148.629-98.565 226.118-70.64 131.646-140.298 220.781-143.229 224.51-4.851 6.179-12.272 9.786-20.128 9.786zM512 51.2c-141.158 0-256 114.842-256 256 0 166.597 74.914 341.176 137.758 458.296 46.186 86.074 92.634 154.306 118.237 189.938 25.709-35.789 72.429-104.432 118.688-190.76 62.643-116.902 137.317-291.163 137.317-457.474 0-141.158-114.84-256-256-256z"></path><path class="path2" d="M512 460.8c-84.696 0-153.6-68.904-153.6-153.6s68.904-153.6 153.6-153.6 153.6 68.904 153.6 153.6-68.904 153.6-153.6 153.6zM512 204.8c-56.464 0-102.4 45.936-102.4 102.4s45.936 102.4 102.4 102.4c56.464 0 102.4-45.936 102.4-102.4s-45.936-102.4-102.4-102.4z"></path></symbol>
-  <span class="lnr lnr-map-marker"></span>
-  Corsega 382, 08023 Barcelona 
-  <br/>931 41 05 83
-  <br/>
-    Diluns-disabtes 13h-15h <br> 
-    + Divendre disabtes 20h-23h
-  
-</coords>
 
-<menu>
-  <a href='#historia'>Historia</a>
-  <a href='#carta'>Carta</a>
+  <i class="fas fa-map-marker-alt"></i> Calle Corsega 382 <a href="https://g.page/eltiet?share" target="_blank" class="button"><i class="fas fa-external-link-alt"></i></a>
+  <br/> 08037 Barcelona 
+
+  <br/><a class="button call" href="tel:+34931410583">931 41 05 83</a> <a class="button mail" target="_blank" href="mailto:info@eltiettaverteca.com">info@eltiettaverteca.com</a>
+  <br/>
+  </coords>
+</section>
+
+
+
+<section id="horarios">
+  <i class="fas fa-clock"></i> Diluns-disabtes 13h-15h <br> 
+  + Divendre disabtes 20h-23h.
+</section>
+
+
+<section id="menu">
+  <h2><i class="fas fa-utensils"></i> Nuestra Carta</h2>
+  <i>(El tiet tambien propone un menu de mediodia entre semana, con pan bebida y postre, por 11,90.
+  <br/> <a target="_blank" class="discreet u" href="tel:+34931410583">Llamanos</a> o consultalo por nuestro <a target="_blank" class="discreet u" href="https://www.instagram.com/eltiet_382/">Instagram</a>.)</i>
+
+    <div id="menu-wrapper">
+      <div class="menu-section">
+        <h3>Para picar</h3>
+        
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Bravas "El Tiet"
+            </div>
+            <div class="item-details">
+              Patata agria cortada a dados acompañadas con nuestras salsas.
+            </div>
+          </div>
+          <div class="item-price">
+            4,15
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Ensaladilla Rusa
+            </div>
+            <div class="item-details">
+              Patata, huevo duro, ventresca de atún, aceitunas, pimiento del piquillo, mayonesa y picos.
+            </div>
+          </div>
+          <div class="item-price">
+            5,40
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Hummus con papadum
+            </div>
+            <div class="item-details">
+              El papadum es una chip elaborada con harina de garbanzo.
+            </div>
+          </div>
+          <div class="item-price">
+            3,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Anchoas del Cantábrico con pan con tomate 
+            </div>
+            <div class="item-details">
+              Unidad
+            </div>
+          </div>
+          <div class="item-price">
+            1,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Jamón Ibérico con pan con tomate
+            </div>
+            <div class="item-details">
+              50 gr. de jamón iberico con pan con tomate.
+            </div>
+          </div>
+          <div class="item-price">
+            8,50
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Cecina de León 
+            </div>
+            <div class="item-details">
+              ...con virutas de queso Parmesano
+            </div>
+          </div>
+          <div class="item-price">
+            8,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Croqueta casera de cocido
+            </div>
+            <div class="item-details">
+              Unidad
+            </div>
+          </div>
+          <div class="item-price">
+            1,50
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Burrata con aceite de tomate seco, jamón ibérico y frutos secos
+            </div>
+            <div class="item-details">
+              Opción vegetariana: sin jamón.
+            </div>
+          </div>
+          <div class="item-price">
+            9,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Coca de sardina ahumada
+            </div>
+            <div class="item-details">
+              Pan de coca tostado con sofrito de cebolla e hinojo, rúcula y tomate cherry.
+            </div>
+          </div>
+          <div class="item-price">
+            9,10
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Fritura del dia
+            </div>
+            <div class="item-details">
+              Preguntanos
+            </div>
+          </div>
+          <div class="item-price">
+            -
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Tiras de pollo con salsa BBQ casera
+            </div>
+            <div class="item-details">
+              Tiras de pollo a la andaluza con polvo de kiko y nuestra salsa bbq.
+            </div>
+          </div>
+          <div class="item-price">
+            6,70
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Huevo parmentier 
+            </div>
+            <div class="item-details">
+              ...con queso manchego.
+            </div>
+          </div>
+          <div class="item-price">
+            4,80
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Huevo parmentier 
+            </div>
+            <div class="item-details">
+              ...con sobrasada ibérica.
+            </div>
+          </div>
+          <div class="item-price">
+            4,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Huevo parmentier 
+            </div>
+            <div class="item-details">
+              ...con Jamón Ibérico.
+            </div>
+          </div>
+          <div class="item-price">
+            5,60
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Huevo parmentier Premium
+            </div>
+            <div class="item-details">
+              Con jamón ibérico y aceite de trufa.
+            </div>
+          </div>
+          <div class="item-price">
+            5,80
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Huevo parmentier con foie
+            </div>
+            <div class="item-details">
+              Con foie fresco a la plancha.
+            </div>
+          </div>
+          <div class="item-price">
+            9,20
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-section">
+        <h3>Carnes</h3>
+        
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Steak Tartare
+            </div>
+            <div class="item-details">
+              100gr. de carne de ternera picada a mano, acompañado con tostaditas y chips de patata.
+            </div>
+          </div>
+          <div class="item-price">
+            8
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Foie poele
+            </div>
+            <div class="item-details">
+              Foie fresco a la plancha con fruta confitada y pan de especias.
+            </div>
+          </div>
+          <div class="item-price">
+            13,50
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Rubia Gallega
+            </div>
+            <div class="item-details">
+              200 gr. de ternera Rubia Gallega madurada 37 días a la parrilla. Acompañada de parmentier y champiñones salteados.
+            </div>
+          </div>
+          <div class="item-price">
+            15,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Steak Tartare de Rubia Gallega
+            </div>
+            <div class="item-details">
+              150gr. de Rubia Gallega cortada a mano para tartar y acompañada con chips y tostaditas.
+            </div>
+          </div>
+          <div class="item-price">
+            14,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Cochinita Pibil
+            </div>
+            <div class="item-details">
+              Carne de cerdo marinada y cocida lentamente al horno, con cebolla roja, cilantro y lima. Todo acompañado con salsa “tatomada” (verduras a la parrilla) y pan de pita crujiente.
+            </div>
+          </div>
+          <div class="item-price">
+            9,80
+          </div>
+        </div>
+     
+      </div>
+      
+      <div class="menu-section">
+        <h3>Pescados</h3>
+        
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Tallarines de calamar
+            </div>
+            <div class="item-details">
+              Tiras de calamar salteadas con ajo y cebollino acompañadas con un huevo frito.       </div>
+          </div>
+          <div class="item-price">
+            9,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Pulpo a la parrilla
+            </div>
+            <div class="item-details">
+              100 gr. de pulpo a la parrilla con cremoso de celeri y caramelo de cassis.
+            </div>
+          </div>
+          <div class="item-price">
+            9,60
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Risotto de gamba roja
+            </div>
+            <div class="item-details">
+              </div>
+          </div>
+          <div class="item-price">
+            12,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              Bacalao confitado
+            </div>
+            <div class="item-details">
+              “Taco” de bacalao desalado en su punto, confitado y acompañado con un cremoso de patata y aceite de sobrasada.Opción vegetariana: cambia el aceite de sobrasada por un aceite de frutos secos.
+            </div>
+          </div>
+          <div class="item-price">
+            13,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">
+              "Fricandó" de rodaballo
+            </div>
+            <div class="item-details">
+              Guisado de rodaballo con patatas, “moixernons” y picada catalana.
+            </div>
+          </div>
+          <div class="item-price">
+            17,90
+          </div>
+        </div>
+     
+      </div>
+      
+
+    </div>
+
+
+</section>
+
+<section id="story">
+  <h2><i class="fas fa-book-open"></i> Mas sobre el Tiet</h2>
+ <p>El Tiet sale de la mente de Ivan, nuestro chef (pero chhh, que no le gusta que le llamemos chef).</p> 
+ <p> blablabla 2017 bla....</p>
+</p>Un lugar con el espiritu convivial, caloroso y desenfadado de una taverna, donde se puede disfrutar y descubrir platos y tapas tradicionales 
+  con un toque creativo, refinado, gastronomico, y sobre todo siempre hecho con cariño !</p>
+  <p>Solo o bien acompañado, sean lo que sean tus ganas del momento : tomar una caña con bravas, una fideua, un cochinillo o te sientes atravecido probar un pulpo con mermelada,
+  sea tapas o plato, tradicional o creativo, comillon o pica pica, el Tiet taver teca te da la bienvenida y de servira lo que pides,siempre 
+   hecho con cariño y gran respeto a los ingredientes, la gastronomia y a los amantes de buena comida.</p>
+
+</section>
  
+<section id="social">
+ <h2>Sigue El Tiet !</h2>
+
+ <a target="_blank" href="https://www.instagram.com/eltiet_382/" class="button"> <i class="fab fa-instagram"></i> eltiet_382</a>
+ <a target="_blank" href="" class="button"><i class="fab fa-facebook-square"></i> eltiettaverteca</a>
+  
  
-</menu>
+
+  
+</section>
+  
+<section id ="theend">
+ 
+  Buen provecho !</section>
+ 
+
 </body>
 </html>
