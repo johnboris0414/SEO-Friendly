@@ -35,6 +35,12 @@
   a.discreet,a.button{color: rgb(227, 211, 211);text-decoration: none;}
   a.discreet.u{display: inline-block;border-bottom: 1px dashed rgb(227, 211, 211);}
   a.button{font-size:.9em;color:black;display:inline-block;vertical-align: middle;padding:.7em .9em;background-color:#780e00;border-radius: 12em}
+
+  @media all and (max-width:360px){ /* FIX : get it all in one line for smaller devices too */
+    a.button{font-size:.8em;padding:.6em .8em;margin-right:.8em !important}
+    h1{font-size: 1.4em;}
+}
+
   
 logo img{background: white}
 /* Hack i found to avoid the white border caused by the image */
@@ -110,6 +116,8 @@ section#modalities, section#address,section#horarios {margin-bottom:1em}
   height:100%;
 }
 }
+
+
 
 </style>
 
