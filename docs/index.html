@@ -36,10 +36,7 @@
   a.discreet.u{display: inline-block;border-bottom: 1px dashed rgb(227, 211, 211);}
   a.button{font-size:.9em;color:black;display:inline-block;vertical-align: middle;padding:.7em .9em;background-color:#780e00;border-radius: 12em}
 
-  @media all and (max-width:360px){ /* FIX : get it all in one line for smaller devices too */
-    a.button{font-size:.8em;padding:.6em .8em;margin-right:.8em !important}
-    h1{font-size: 1.4em;}
-}
+
 
   
 logo img{background: white}
@@ -95,7 +92,6 @@ section#modalities, section#address,section#horarios {margin-bottom:1em}
 #address .call, #address .mail{margin-top:1em;margin-right:1em;}
 #social .button{font-size: 1.4em;display: block;margin-bottom: 1em;}
 #story p{margin-bottom:1em}
-#press h2{font-size: 1.4em;}
 #press ul{list-style: none;}
 #press ul li{margin-bottom:1em}
 #theend{text-align: center;padding: 5em 0;margin-bottom: 0;}
@@ -115,6 +111,13 @@ section#modalities, section#address,section#horarios {margin-bottom:1em}
   width:100%;
   height:100%;
 }
+}
+@media all and (max-width:360px){ /* FIX : get it all in one line for smaller devices too */
+    a.button{font-size:.8em;padding:.6em .8em;margin-right:.8em !important}
+    h1{font-size: 1.4em;}
+    #press h2 {
+    font-size: 1.6em;
+    }
 }
 
 
