@@ -37,19 +37,22 @@
     background:black;
     border-top: 1px solid rgb(227, 211, 211);;
     margin: 0 -1em ;
+    height:5em;
   }
 
   nav a{
     display: inline-block;
     width: 20%;
+    height: 100%;
     font-size: .8em;
     text-align: center;
     color:rgb(227, 211, 211);;
     text-decoration: none;
-    padding:1em;
+    padding:2em 1em;
     border-right: 1px solid rgb(227, 211, 211);
     transition: 0.3s;
 }
+
   
   nav  a:last-child{
     border-right:none;
@@ -140,6 +143,7 @@ section#modalities, section#address,section#horarios {margin-bottom:1em}
 @media all and (min-width: 769px) { /* this should be 762 by bg vid size, but let's stretch by a few pix to keep the  ipads portrait out of it  ... */
   #wrapper-body{width:768px;margin:auto;position: relative;overflow: hidden;}
   nav{width:768px;height:3em;top:0;bottom:unset;border-bottom: 1px solid rgb(227, 211, 211);}
+  nav a{padding:1em}
   body{font-size:140%;margin-top:3em}
   header video{
   width:100%;
