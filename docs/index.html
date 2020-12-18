@@ -24,10 +24,38 @@
 }
 
   *{margin:0;padding:0;box-sizing: border-box;}
+  html{scroll-behavior: smooth;}
   body{background:#312020;color: rgb(227, 211, 211);font-size:100%;}
-  #wrapper-body{padding:0 1em;background:black;}
+  #wrapper-body{width:100%;padding:0 1em;background:black;}
 
+  nav{
+    position:fixed;
+    z-index: 2;
+    display: flex;
+    bottom:0;
+    width: 100%;
+    background:black;
+    border-top: 1px solid rgb(227, 211, 211);;
+    margin: 0 -1em ;
+  }
 
+  nav a{
+    display: inline-block;
+    width: 20%;
+    font-size: .8em;
+    text-align: center;
+    color:rgb(227, 211, 211);;
+    text-decoration: none;
+    padding:1em;
+    border-right: 1px solid rgb(227, 211, 211);
+    transition: 0.3s;
+}
+  
+  nav  a:last-child{
+    border-right:none;
+  }
+
+  nav a:hover{background:#780e00;}
   h1,h2,h3{font-weight: normal;}
   h1{font-size: 1.6em;line-height: 1em;}
   h2{font-size:2em}
@@ -82,9 +110,9 @@ header .caption .text .reviews{
   margin-top:.2em
 }
 
-section{margin-bottom:5em}
+section{margin-bottom:3em}
 section .fas{margin-right:.2em}
-section h2{margin-bottom:1em;color:#780e00}
+section h2{margin-bottom:1em;padding-top:2em;color:#780e00}
 
 section#modalities, section#address,section#horarios {margin-bottom:1em}
 #map{height:30vw}
@@ -94,6 +122,7 @@ section#modalities, section#address,section#horarios {margin-bottom:1em}
 #address .call, #address .mail{margin-top:1em;margin-right:1em;}
 #social .button{font-size: 1.4em;display: block;margin-bottom: 1em;}
 #story p{margin-bottom:1em}
+#social{height:100vh}
 #press ul{list-style: none;}
 #press ul li{margin-bottom:1em}
 #theend{text-align: center;padding: 5em 0;margin-bottom: 0;}
@@ -106,13 +135,18 @@ section#modalities, section#address,section#horarios {margin-bottom:1em}
 .item-details{line-height:1em;color:#827979}
 .item-price{font-size: .9em;padding-top:.2em}
 
+
+
 @media all and (min-width: 769px) { /* this should be 762 by bg vid size, but let's stretch by a few pix to keep the  ipads portrait out of it  ... */
-  #wrapper-body{width:768px;margin:auto;}
-  body{font-size:140%}
+  #wrapper-body{width:768px;margin:auto;position: relative;overflow: hidden;}
+  nav{width:768px;height:3em;top:0;bottom:unset;border-bottom: 1px solid rgb(227, 211, 211);}
+  body{font-size:140%;margin-top:3em}
   header video{
   width:100%;
   height:100%;
 }
+section{margin-bottom:2em}
+section h2{padding-top:3em}
 }
 @media all and (max-width:360px){ /* FIX : get it all in one line for smaller devices too */
     a.button{font-size:.8em;padding:.6em .8em;margin-right:.8em !important}
@@ -128,10 +162,21 @@ section#modalities, section#address,section#horarios {margin-bottom:1em}
 
 </head>
 <body>
+ 
 <div id="wrapper-body">
 <div id="lang">
 CAT - <u>ESP</u> - EN - FR
 </div>
+
+<nav>
+  <a href="#top"><i class="fas fa-home"></i></a>
+    <a href="#menu">Carta</a>    
+    <a href="#story">El Tiet ?</a>
+    <a href="#press">Prensa</a>
+    <a href="#social">Siguenos</a>
+    
+</nav>
+
 <header>
 <video autoplay muted playsinline loop id="myVideo" 
 poster="assets/img/cover-el-tiet-platos.jpg"
