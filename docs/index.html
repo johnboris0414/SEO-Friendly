@@ -24,8 +24,8 @@
 }
 
   *{margin:0;padding:0;box-sizing: border-box;}
-  body{background:black;color: rgb(227, 211, 211);font-size:100%;}
-  #wrapper-body{margin:0 1em}
+  body{background:#312020;color: rgb(227, 211, 211);font-size:100%;}
+  #wrapper-body{padding:0 1em;background:black;}
 
 
   h1,h2,h3{font-weight: normal;}
@@ -98,6 +98,12 @@ section h2{margin-bottom:1em;color:#780e00}
 .item-name{font-weight: 500;}
 .item-details{line-height:1em;opacity:.7}
 .item-price{font-size: .9em;padding-top:.2em}
+
+@media all and (min-width: 720px) {
+  #wrapper-body{width:720px;margin:auto;}
+  body{font-size:140%}
+}
+
 </style>
 
 </head>
