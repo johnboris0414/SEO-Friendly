@@ -24,42 +24,31 @@
 }
 
   *{margin:0;padding:0;box-sizing: border-box;}
-  body{margin:0 5%; background:black;}
-  body,section,div,p {
-    color: rgb(227, 211, 211);
-   
-    font-size:4vw;
-    
-  }
+  body{background:black;color: rgb(227, 211, 211);font-size:100%;}
+  #wrapper-body{margin:0 1em}
+
 
   h1,h2,h3{font-weight: normal;}
-  h2{font-size:9vw}
+  h1{font-size: 1.6em;}
+  h2{font-size:2em}
 
   a.discreet,a.button{color: rgb(227, 211, 211);text-decoration: none;}
-  a.discreet.u{display: inline-block;border-bottom: 3px dashed rgb(227, 211, 211);}
-  a.button{opacity:.7;display:inline-block;vertical-align: middle;padding:20px;background-color:#780e00;border-radius: 30px;}
+  a.discreet.u{display: inline-block;border-bottom: 1px dashed rgb(227, 211, 211);}
+  a.button{font-size:.9em;opacity:.7;display:inline-block;vertical-align: middle;padding:.7em;background-color:#780e00;border-radius: 12em}
   
-  logo img{background: white}
-  /* Hack i found to avoid the white border caused by the image */
-  logo{position:relative;width:20vw;height:20vw;overflow: hidden;}
-  logo img{position:absolute;weight:120%;height:120%;left:-10%;top:-10%}
+logo img{background: white}
+/* Hack i found to avoid the white border caused by the image */
+logo{position:relative;width:20vw;height:20vw;overflow: hidden;}
+logo img{position:absolute;width:120%;height:120%;left:-10%;top:-10%}
 
-#lang{padding :20px 0;text-align: right;opacity:.6;}
+#lang{padding :1em 0;text-align: right;opacity:.6;}
 
-header,section{display: block;/* font-size:35px */}
+header,section{display: block;}
 
 header {
-  width: 720px;
-  height: 720px;
   position: relative;
-  margin: 0 -5%;
-}
-  
-
-header {
-  width: 100vw;
-  height: 100vw;
-  margin-bottom:100px;
+  margin: 0 -1em ;
+  margin-bottom:4em; 
 }
 
 header video{
@@ -78,40 +67,40 @@ header .caption {
   background: rgba(0, 0, 0, 0.5);
   color: #f1f1f1;
   width: 100%;
-  padding: 20px;
+  padding: 1.2em;
 }
 
 header .caption .text{
-  margin-left:40px;
+  margin-left:1.2em;
 }
 
 header .caption .text .reviews{
-  margin-top:15px
+  margin-top:1em
 }
 
-section{margin-bottom:140px;}
-section .fas{margin-right:20px}
+section{margin-bottom:5em}
+section .fas{margin-right:.2em}
 
-section h2{margin-bottom:40px;color:#780e00}
+section h2{margin-bottom:1em;color:#780e00}
 
-#address .fa-external-link-alt{margin-left:12px}
-#address .call, #address .mail{margin-top:50px;margin-right:20px;/*font-size:37px*/}
-#social .button{font-size: 60px;display: block;margin-bottom: 50px;}
-#theend{text-align: center;padding: 200px 0}
-#story p{margin-bottom:2vw}
+#address .fa-external-link-alt{margin-left:1em}
+#address .call, #address .mail{margin-top:1em;margin-right:1.2em;/*font-size:37px*/}
+#social .button{font-size: 1.4em;display: block;margin-bottom: 1em;}
+#theend{text-align: center;padding: 5em 0}
+#story p{margin-bottom:1em}
 
-.menu-section{margin-bottom:10vw;margin-top:15vw}
-.menu-section h3{font-size: 8vw;color:#780e00;margin-bottom:5vw}
+.menu-section{margin-bottom:2.4em;margin-top:2.4em}
+.menu-section h3{font-size: 1.8em;color:#780e00;margin-bottom:.2em}
 .menu-item{display: flex;padding-bottom:3vw;margin-bottom:3vw;border-bottom: 2px dotted white;}
 .item-desc{flex-grow: 4}
 .item-name{font-weight: 500;}
-.item-details{line-height:3.5vw;opacity:.7}
-.item-price{font-size: 1.4vw;padding-top:1.6vw}
+.item-details{line-height:1em;opacity:.7}
+.item-price{font-size: .9em;padding-top:.2em}
 </style>
 
 </head>
 <body>
-
+<div id="wrapper-body">
 <div id="lang">
 CAT - ESP - EN - FR
 </div>
@@ -546,7 +535,7 @@ CAT - ESP - EN - FR
 <section id ="theend">
  
   Buen provecho !</section>
- 
+</div>
 
 </body>
 </html>
