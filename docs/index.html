@@ -60,7 +60,7 @@
     border-right:none;
   }
 
-  nav a:hover,nav a.active{background:#780e00;}
+  nav a.active{background:#780e00;}
   h1,h2,h3{font-weight: normal;}
   h1{font-size: 1.6em;line-height: 1em;}
   h2{font-size:2em}
@@ -147,6 +147,7 @@ section#modalities, section#address,section#horarios {margin-bottom:1em}
   #wrapper-body{width:768px;margin:auto;position: relative;overflow: hidden;}
   nav{width:768px;height:3em;top:0;bottom:unset;border-bottom: 1px solid rgb(227, 211, 211);}
   nav a{line-height:3.8em}
+  nav a:hover{background:#780e00;}
   body{font-size:140%;margin-top:3em}
   header video{
   width:100%;
@@ -706,7 +707,7 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
         scrollDistance = target.offsetTop - window.scrollY ;
         if(scrollDistance === 0){
           console.log('stop')
-          clearInterval(scrollInterval)
+          clearInterval(scrollInterval);
         }
 
        },20); // 40 = 25IPS. Human eye. But not fluid. and speed not reliable
@@ -719,8 +720,6 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
    document.querySelectorAll("nav a").forEach(e => {
     var targetOffset = document.querySelector(e.hash).offsetTop;
     e.setAttribute('data-target-scrollY', targetOffset);
-    console.log(targetOffset);
-    //  e.addEventListener('click',scrollToTarget,e);
    })
 
    var winLastScrollY = -1;
@@ -735,15 +734,13 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
       const e = menu[i];
       if(winLastScrollY >= e.getAttribute('data-target-scrollY')){
         const currentHash = e.hash;
-        menu.filter(e => e.hash !== currentHash).forEach(e=>e.classList.remove('active'));
+        menu.filter(e => e.classList.contains("active") && e.hash !== currentHash).forEach(e=>e.classList.remove('active'));
         e.classList.add('active');
         break;
       };
     }
 
-    
-
-   },100); 
+   },500); 
   
  </script>
 </html>
