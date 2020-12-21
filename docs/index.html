@@ -759,13 +759,13 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
     var winLastScrollY = window.scrollY;
      manualScrollAction = setInterval(()=>{
       if(winLastScrollY === window.scrollY){
-        console.log('auto selection active from manual selection func')
+        console.log('auto selection active from manual selection func');
         autoScrollAction = setInterval(autoSelectMenuItem,500); 
         clearInterval(manualScrollAction);
         // console.log(activeIntervals)
       }
       winLastScrollY = window.scrollY;
-    },20);
+    },100);
   }
 
   document.querySelectorAll("nav a").forEach(e => e.addEventListener('click',manualSelectMenuItem,e));
