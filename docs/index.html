@@ -60,7 +60,7 @@
     border-right:none;
   }
 
-  nav a:hover{background:#780e00;}
+  nav a:hover,nav a.active{background:#780e00;}
   h1,h2,h3{font-weight: normal;}
   h1{font-size: 1.6em;line-height: 1em;}
   h2{font-size:2em}
@@ -716,7 +716,34 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
    }
 
 
+   document.querySelectorAll("nav a").forEach(e => {
+    var targetOffset = document.querySelector(e.hash).offsetTop;
+    e.setAttribute('data-target-scrollY', targetOffset);
+    console.log(targetOffset);
+    //  e.addEventListener('click',scrollToTarget,e);
+   })
 
+   var winLastScrollY = -1;
+   const menu = Array.from(document.querySelectorAll("nav a")).reverse();
+
+   setInterval(() => { 
+     
+    if(winLastScrollY === window.scrollY)return;
+    winLastScrollY = window.scrollY;
+
+    for(let i=0;i<menu.length;i++){
+      const e = menu[i];
+      if(winLastScrollY >= e.getAttribute('data-target-scrollY')){
+        const currentHash = e.hash;
+        menu.filter(e => e.hash !== currentHash).forEach(e=>e.classList.remove('active'));
+        e.classList.add('active');
+        break;
+      };
+    }
+
+    
+
+   },100); 
   
  </script>
 </html>
