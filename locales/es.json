@@ -1,0 +1,60 @@
+{
+    "page": {
+        "lang": "es",
+        "metadesc": "Taverna gastronomica del eixample de Barcelona, con comida casera y creativa. Tambien takeaway (para llevar) y delivery (a domicilio)",
+        "title": "El Tiet Taver Teca - Taverna Gastronomica en Barcelona",
+        "logo":{
+            "text-alt":"logo el Tiet Taver teca"
+        },
+        "welcome":"Bienvenido al Tiet!",
+        "welcome-sub":"Taverna gastronomica",
+        "reviews":"reseñas",
+        "reviews-alt-text":"Ver reseñas del restaurante El Tiet en Google",
+        "modalities":"Restaurante - Takeaway - Delivery",
+        "city":"Barcelona",
+        "call-alt-text":"Llamar El Tiet para reservar tu mesa o cualquier duda.",
+        "email-alt-text":"Contacta al Tiet Taver Teca por email.",
+
+        "opendays":"Lunes-Sabado",
+        "opendays2": "Viernes y Sabado",
+        "map-text-alt":"Plan Google maps para ubicuar o llegar al Tiet"
+    },
+    "nav": {
+        "top": {
+            "text-alt": "vuelve al inicio, photos, ubicuacion y contacto del Tiet",
+            "text-link": ""
+        },
+        "menu": {
+            "text-alt": "La carta del Tiet",
+            "text-link": "Carta"
+        },
+        "story": {
+            "text-alt": "Conoce el Tiet, su cocinero y su historia",
+            "text-link": "El Tiet ?"
+        },
+        "press": {
+            "text-alt": "Prensa foodie, blogueros y aficionados gastronomicos hablan del Tiet",
+            "text-link": "Prensa"
+        },
+        "social": {
+            "text-alt": "Unete al Instagram/Facebook del Tiet",
+            "text-link": "Siguenos"
+        }
+     
+    },
+    "menu":{
+        "title":"Nuestra Carta",
+        "text":"El Tiet tambien propone un menu de mediodia entre semana, con pan bebida y postre, por 11,50.",
+        "call-text-alt":"Llamanos para conocer el menu del dia",
+        "callus": "Llamanos",
+        "text2":"o consultalo por nuestro",
+        "ig-text-alt":"Mira el menu del dia en el Instagram del Tiet Taver Teca"
+    },
+
+
+    "other": {
+        "key": "man",
+        "ok": "confirm"
+    }
+ 
+}

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang-t="page.lang"  data-attr-t>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="Description" content="Taverna gastronomica del eixample de Barcelona, con comida casera y creativa. Tambien takeaway (para llevar) y delivery (a domicilio)">
+  <meta name="Description" content-t="page.metadesc" data-attr-t>
   <!---//
   <link href="//fonts.googleapis.com/css?family=Chelsea Market&subset=latin" rel="stylesheet" type="text/css">
   //--->
@@ -18,7 +18,7 @@
   <script defer src="https://kit.fontawesome.com/6b6c40cd1a.js" crossorigin="anonymous"></script>
 
 
-  <title>El Tiet taver teca - taverna gastronomica en Barcelona</title>
+  <title data-t>page.title</title>
 <style>
 * {
  /*font-family: 'Chelsea Market', sans-serif;*/
@@ -177,11 +177,11 @@ CAT - <u>ESP</u> - EN - FR
 </div>
 
 <nav>
-  <a href="#top" aria-label="vuelve al inicio, photos, ubicuacion y contacto del Tiet"><i class="fas fa-home"></i></a>
-    <a href="#menu" aria-label="La carta del Tiet">Carta</a>    
-    <a href="#story" aria-label="Conoce el Tiet, su cocinero y su historia">El Tiet ?</a>
-    <a href="#press" aria-label="prensa foodie y blogueros gastronomicos hablan del Tiet">Prensa</a>
-    <a href="#social" aria-label="Unete al Instagram/Facebook del Tiet">Siguenos</a>
+  <a href="#top" aria-label-t="nav.top.text-alt" data-attr-t><i class="fas fa-home"></i></a>
+    <a href="#menu" aria-label-t="nav.menu.text-alt" data-t data-attr-t>nav.menu.text-link</a>    
+    <a href="#story" aria-label-t="nav.story.text-alt" data-t data-attr-t>nav.story.text-link</a>
+    <a href="#press" aria-label-t="nav.press.text-alt" data-t data-attr-t>nav.press.text-link</a>
+    <a href="#social" aria-label-t="nav.social.text-alt" data-t data-attr-t>nav.social.text-link</a>
     
 </nav>
 
@@ -195,53 +195,54 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
 
 <div class="caption">
   <logo>
-    <img alt="logo el Tiet Taver teca" src="assets/img/logo.svg"/>
+    <img alt-t="page.logo.text-alt" src="./assets/img/logo.svg" data-attr-t/>
   </logo>
   <div class="text">
-  <h1>Bienvenido al Tiet!</h1>
-  <p>Taverna gastronomica</p>
+  <h1 data-t>page.welcome</h1>
+  <p data-t>page.welcome-sub</p>
   <p class="reviews">4,4 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 
-    <a aria-label="Ver reseñas del restaurante El Tiet en Google" target="_blank" rel="noopener" class="discreet" href="https://g.co/kgs/s7Y23S">362 reseñas <i class="fas fa-external-link-alt"></i></a></p>
+    <a aria-label-t="page.reviews-alt-text" target="_blank" rel="noopener" class="discreet" href="https://g.co/kgs/s7Y23S" data-attr-t>362 <span data-t>page.reviews</span> <i class="fas fa-external-link-alt"></i></a></p>
 </div>
 </div> 
 </header>
 
 
-<section id="modalities">Restaurante - Takeaway - Delivery</section>
+<section id="modalities" data-t>page.modalities</section>
 <section id="address">
 <coords>
 
   <i class="fas fa-map-marker-alt"></i> Calle Corsega 382 
-  <span class="address-line">08037 Barcelona</span>
+  <span class="address-line">08037 <span data-t>page.city</span></span>
 
-  <br/><a aria-label="Llamar El Tiet para reservar tu mesa o cualquier duda." class="button call" href="tel:+34931410583">931 41 05 83</a> <a aria-label="Contacta al Tiet Taver Teca por email " class="button mail" target="_blank" rel="noopener" href="mailto:info@eltiettaverteca.com">info@eltiettaverteca.com</a>
+  <br/><a aria-label-t="page.call-alt-text" class="button call" href="tel:+34931410583" data-attr-t>931 41 05 83</a> <a aria-label-t="page.email-alt-text" class="button mail" target="_blank" rel="noopener" href="mailto:info@eltiettaverteca.com" data-attr-t>info@eltiettaverteca.com</a>
   <br/>
   </coords>
 </section>
 
-<section id="horarios">
-  <i class="fas fa-clock"></i> Diluns-disabtes 13h-15h <br> 
-  <span class="address-line">+ Divendre disabtes 20h-23h.</span>
+<section id="horarios"> 
+  <i class="fas fa-clock"></i> <span data-t>page.opendays</span> 13h-15h <br> 
+  <span class="address-line"> <span data-t>page.opendays2</span> 20h-23h.</span>
 </section>
 
 <section id="map">
   <iframe 
   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.833616566342!2d2.161181515426157!3d41.39941957926299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a29515f01531%3A0xcef4e0a4c95c4398!2sEl%20Tiet%20Taver%20Teca!5e0!3m2!1sen!2ses!4v1608283260493!5m2!1sen!2ses" 
-  title="Plan Google maps para ubicuar o llegar al Tiet"
+  title-t="page.map-text-alt"
   width="100%" 
   height="100%" 
   frameborder="0" 
   style="border:0;" 
   allowfullscreen="" 
   aria-hidden="false" 
-  tabindex="0"></iframe>
+  tabindex="0"
+  data-attr-t></iframe>
 </section>
 
 
 <section id="menu">
-  <h2><i class="fas fa-utensils"></i> Nuestra Carta</h2>
-  <i>(El Tiet tambien propone un menu de mediodia entre semana, con pan bebida y postre, por 11,90.
-  <br/> <a aria-label="Llamanos para conocer el menu del dia" al target="_blank" rel="noopener nofollow" class="discreet u" href="tel:+34931410583">Llamanos</a> o consultalo por nuestro <a aria-label="Mira el menu del dia en el Instagram del Tiet Taver Teca" target="_blank" rel="noopener nofollow" class="discreet u" href="https://www.instagram.com/eltiet_382/">Instagram</a>.)</i>
+  <h2><i class="fas fa-utensils"></i> <span data-t>menu.title</span></h2>
+  <i><span data-t>menu.text</span>
+  <br/> <a aria-label-t="menu.call-text-alt" target="_blank" rel="noopener nofollow" class="discreet u" href="tel:+34931410583" data-attr-t data-t>menu.callus</a> <span data-t>menu.text2</span> <a aria-label-t="menu.ig-text-alt" target="_blank" rel="noopener nofollow" class="discreet u" href="https://www.instagram.com/eltiet_382/" data-attr-t>Instagram</a>.)</i>
 
     <div id="menu-wrapper">
       <div class="menu-section">
