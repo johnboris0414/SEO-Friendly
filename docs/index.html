@@ -16,7 +16,9 @@
 <meta name="msapplication-TileColor" content="#da532c">
 <meta name="theme-color" content="#ffffff">
   <script defer src="https://kit.fontawesome.com/6b6c40cd1a.js" crossorigin="anonymous"></script>
-<title>El Tiet taver teca - taverna gastronomica en Barcelona</title>
+
+
+  <title>El Tiet taver teca - taverna gastronomica en Barcelona</title>
 <style>
 * {
  /*font-family: 'Chelsea Market', sans-serif;*/
@@ -166,7 +168,7 @@ section h2{padding-top:3em}
 </style>
 
 </head>
-<body>
+<body id="top">
  
 <div id="wrapper-body">
 <div id="lang">
@@ -676,4 +678,45 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
 </div>
 
 </body>
+<script>
+  "use strict";
+   if(navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1){
+
+   var scrollInterval ;
+     
+     const scrollToTarget = function(e) { 
+      e.preventDefault();
+      clearInterval(scrollInterval);
+      var scrollStep = 10;
+      const target = document.querySelector(this.hash);
+      var scrollDistance = target.offsetTop - window.scrollY ;
+      if(!scrollDistance)return;
+      
+      var direction  = scrollDistance > 0 ? 1 : -1;
+      scrollInterval = setInterval(() => { 
+
+        scrollStep +=scrollStep/8; // acceleration
+        if(Math.abs(scrollDistance) < scrollStep){
+          // TODO : deceleration
+          scrollStep= Math.abs(scrollDistance);  
+        }
+        
+        window.scrollTo(0,window.scrollY + direction*scrollStep);
+        
+        scrollDistance = target.offsetTop - window.scrollY ;
+        if(scrollDistance === 0){
+          console.log('stop')
+          clearInterval(scrollInterval)
+        }
+
+       },20); // 40 = 25IPS. Human eye. But not fluid. and speed not reliable
+     } 
+  
+     document.querySelectorAll("nav a").forEach(e => e.addEventListener('click',scrollToTarget,e));
+   }
+
+
+
+  
+ </script>
 </html>
