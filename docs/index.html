@@ -725,8 +725,8 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
    var winLastScrollY = -1;
    const menu = Array.from(document.querySelectorAll("nav a")).reverse();
 
-   setInterval(() => { 
-     
+   const autoSelectMenuItem = () => { 
+    
     if(winLastScrollY === window.scrollY)return;
     winLastScrollY = window.scrollY;
 
@@ -740,7 +740,36 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
       };
     }
 
-   },500); 
+   }
+
+  
+  var autoScrollAction= setInterval(autoSelectMenuItem,500); 
+  var manualScrollAction;
+
+  // When clicking on menu, remove this interval, and read it when done.
+  const manualSelectMenuItem = function(e) {
+    console.log('manual selection active');
+    clearInterval(autoScrollAction);
+    clearInterval(manualScrollAction);
+
+    const currentHash = this.hash;
+    menu.filter(e => e.classList.contains("active") && e.hash !== currentHash).forEach(e=>e.classList.remove('active'));
+        this.classList.add('active');
+
+    var winLastScrollY = window.scrollY;
+     manualScrollAction = setInterval(()=>{
+      if(winLastScrollY === window.scrollY){
+        console.log('auto selection active from manual selection func')
+        autoScrollAction = setInterval(autoSelectMenuItem,500); 
+        clearInterval(manualScrollAction);
+        // console.log(activeIntervals)
+      }
+      winLastScrollY = window.scrollY;
+    },20);
+  }
+
+  document.querySelectorAll("nav a").forEach(e => e.addEventListener('click',manualSelectMenuItem,e));
+
   
  </script>
 </html>
