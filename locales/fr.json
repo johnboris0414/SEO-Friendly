@@ -6,7 +6,7 @@
         "logo":{
             "text-alt":"logo El Tiet Taver teca"
         },
-        "lang-links":"<a aria-label=\"El Tiet en catala\" href=\"./\">CAT</a> - <a aria-label=\"El Tiet en español\" href=\"./es/\">ESP</a> - <a aria-label=\"El Tiet in english\" href=\"./en/\">EN</a> - <a aria-label=\"El Tiet en français\" class=\"active\" href=\"./fr/\">FR</a>",
+        "lang-links":"<a aria-label=\"El Tiet en catala\" href=\"../\">CAT</a> - <a aria-label=\"El Tiet en español\" href=\"../es/\">ESP</a> - <a aria-label=\"El Tiet in english\" href=\"../en/\">EN</a> - <a aria-label=\"El Tiet en français\" class=\"active\" href=\"./\">FR</a>",
         "welcome":"Bienvenue à El Tiet!",
         "welcome-sub":"Taverne gastronomique",
         "reviews":"avis",
