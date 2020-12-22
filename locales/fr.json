@@ -1,0 +1,197 @@
+{
+    "page": {
+        "lang": "fr",
+        "metadesc": "Taverne gastronomique située dans le quartier de l'eixample de Barcelona, cuisine à la fois traditionnelle et creative. Egalement à emporter et à domicile.",
+        "title": "El Tiet Taver Teca - Taverna Gastronomica en Barcelona",
+        "logo":{
+            "text-alt":"logo El Tiet Taver teca"
+        },
+        "lang-links":"<a aria-label=\"El Tiet en catala\" href=\"./\">CAT</a> - <a aria-label=\"El Tiet en español\" href=\"./es/\">ESP</a> - <a aria-label=\"El Tiet in english\" href=\"./en/\">EN</a> - <a aria-label=\"El Tiet en français\" class=\"active\" href=\"./fr/\">FR</a>",
+        "welcome":"Bienvenue à El Tiet!",
+        "welcome-sub":"Taverne gastronomique",
+        "reviews":"avis",
+        "reviews-alt-text":"Voir les avis Google du restaurant El Tiet",
+        "modalities":"Restaurant - A emporter - A domicile",
+        "city":"Barcelone",
+        "call-alt-text":"Appeler El Tiet pour réserver votre table, ou poser une question.",
+        "email-alt-text":"Contacter El Tiet Taver Teca par email.",
+
+        "opendays":"Lundi-Samedi",
+        "opendays2": "Vendredi et Samedi",
+        "map-text-alt":"Plan Google maps pour vous situer ou arriver à El Tiet"
+    },
+    "nav": {
+        "top": {
+            "text-alt": "Retour à l'accueil, photos, plans, adresse et contacts d'El Tiet",
+            "text-link": ""
+        },
+        "menu": {
+            "text-alt": "La carte d'El Tiet",
+            "text-link": "Carte"
+        },
+        "story": {
+            "text-alt": "Découvrez El Tiet, sa cuisine et son histoire",
+            "text-link": "El Tiet ?"
+        },
+        "press": {
+            "text-alt": "Presse foodie, blogueurs y amateurs de gastronomie parlent d'El Tiet",
+            "text-link": "Presse"
+        },
+        "social": {
+            "text-alt": "Joignez-vou à l'Instagram/Facebook d'El Tiet",
+            "text-link": "Suivez-nous"
+        }
+     
+    },
+    "menu":{
+        "title":"Notre Carte",
+        "text":"El Tiet propose également un menu du jour le midi en semaine, pain boisson et dessert inclus, pour 11,50.",
+        "call-text-alt":"Appellez nous pour connaitre le menu du jour",
+        "callus": "Appellez-nous",
+        "text2":"ou consultez le menu du jour sur notre ",
+        "ig-text-alt":"Consultez le menu du jour sur l'Instagram d'El Tiet Taver Teca",
+        "pica":{
+            "title":"Tapas",
+            "i":{
+                "bravas":{
+                    "name":"Bravas \"El Tiet\"",
+                    "desc":"Patatas bravas, coupées en dés et acompagnées de nos sauces."
+                },
+                "salad":{
+                    "name":"Salade Russe",
+                    "desc":"Pommes de terre, oeufs durs, ventrèche de thon, olives, petits poivrons \"pimiento del piquillo\", mayonnaise et picos (pain)."
+                },
+                "hummus":{
+                    "name":"Hummus et papadum",
+                    "desc":"Le papadum es una galette faite avec de la farine de pois chiche."
+                },
+                "anchoa":{
+                    "name":"Anchois de Cantabrie avec pain à la tomate",
+                    "desc":"La pièce."
+                },
+
+                "jamon":{
+                    "name":"Jambon Ibérique avec pain à la tomate",
+                    "desc":"50 gr. de jambon iberique avec pain à la tomate."
+                },
+                "cecina":{
+                    "name":"Cecina de León",
+                    "desc":"aux copeaux de Parmesan."
+                },
+                "croc":{
+                    "name":"Croquete maison de ragoût",
+                    "desc":"La pièce."
+                },
+                "burrata":{
+                    "name":"Burrata à l'huile de tomates sèches, jambon ibérique et fruits secs",
+                    "desc":"Variante possible sans jambon."
+                },
+                "sardina":{
+                    "name":"Coca de sardine fumée",
+                    "desc":"Sur pain de coca (fougasse) toastés, avec sofrito d'oignon et fenouil, rucula et tomate cherry."
+                },
+                "fritura":{
+                    "name":"Friture du jour",
+                    "desc":"Demandez nous."
+                },
+                "pollo":{
+                    "name":"Lanières de poulet sauce BBQ maison",
+                    "desc":"Lanières de poulet à l'andalouse, panées à la poudre de kiko, ey notre sauce barbecue."
+                },
+                "huego":{
+                    "name":"Oeuf parmentier",
+                    "desc":"Au fromage manchego."
+                },
+                "hueda":{
+                    "name":"Oeuf parmentier",
+                    "desc":"A la sobrasada ibérique."
+                },
+                "huemon":{
+                    "name":"Oeuf parmentier",
+                    "desc":"Au Jambon Ibérique."
+                },
+                "huemium":{
+                    "name":"Oeuf parmentier Premium",
+                    "desc":"Au Jambon Ibérique et huile de truffe."
+                },
+                "huefoie":{
+                    "name":"Oeuf parmentier foie",
+                    "desc":"Au foie gras frais a la plancha."
+                }
+
+            }
+        },
+        "meat":{
+            "title":"Viandes",
+            "i":{
+                "tartare":{
+                    "name":"Steak Tartare",
+                    "desc":"100gr. de viande de boeuf haché à la main, acompagné de petits toasts et chips de pomme de terre."
+                },
+                "foie":{
+                    "name":"Foie poele",
+                    "desc":"Foie gras frais a la plancha avec fruit confit et pain d'épices."
+                },
+                "rubia":{
+                    "name":"Rubia Gallega",
+                    "desc":"200 gr. de boeuf de race Rubia Gallega (blonde galicienne) afinée 37 jours, cuite au grill. Acompagnée de parmentier y champignons de paris sautés."
+                },
+                "trubia":{
+                    "name":"Steak Tartare de Rubia Gallega",
+                    "desc":"150gr. de boeuf de race Rubia Gallega (blonde galicienne) haché à la main, acompagné de petits toasts et chips de pomme de terre."
+                },
+                "pibil":{
+                    "name":"Cochinita Pibil",
+                    "desc":"Viande de cochon de lait marinée et cuisson lente au four, avec oignon rouge, coriandre et citron vert. Accompagné de sauce “tatomada” (légumes au grill) et pain  de pita croustillant."
+                }
+            }
+        },
+        "fish":{
+            "title":"Poissons",
+            "i":{
+                "tallarines":{
+                    "name":"Tallarines de calamar",
+                    "desc":"Lamelles de calamar sautées à l'ail et à la ciboulette, accompagné d'un oeuf au plat."
+                },
+                "pulpo":{
+                    "name":"Poulpe grillé",
+                    "desc":"100 gr. de poulpe au grill avec crême de celeri et caramel de cassis."
+                },
+                "gamba":{
+                    "name":"Risotto de gambas rouges",
+                    "desc":""
+                },
+                "bacalao":{
+                    "name":"Morue confite",
+                    "desc":"\"Taco\" de morue désalée à point, confite y accompagnée d'une creme de pomme et terre ave huile de sobrasada. Possibilité de remplacer l'huile de sobrasada pour une huile de fruits secs."
+                },
+                "rodaballo":{
+                    "name":"\"Fricandó\" de turbot",
+                    "desc":"Fricassé de turbot avec pommes de terre, \"moixernons\" (champignon) et picada catalane (légumes hâchés)."
+                }
+            }
+        }
+    },
+    "sections":{
+        "story":{
+            "title": "Découvrez El Tiet",
+            "text":"<p>El Tiet sale de la mente de Ivan, nuestro chef (pero chhh, que no le gusta que le llamemos chef).</p> <p> blablabla 2017 bla....</p></p>Un lugar con el espiritu convivial, caloroso y desenfadado de una taverna, donde se puede disfrutar y descubrir platos y tapas tradicionales con un toque creativo, refinado, gastronomico, y sobre todo siempre hecho con cariño !</p><p>Solo o bien acompañado, sean lo que sean tus ganas del momento : tomar una caña con bravas, una fideua, un cochinillo o te sientes atravecido probar un pulpo con mermelada,sea tapas o plato, tradicional o creativo, comillon o pica pica, carne, pescado o verduras, el Tiet taver teca te da la bienvenida y de servira lo que pides,siempre hecho con cariño y gran respeto a los ingredientes, la gastronomia y a los amantes de buena comida.</p>"
+        },
+        "press":{
+            "title": "Ils parlent de nous",
+            "link-text-alt":"Lire cet article sur El Tiet"
+        },
+        "social":{
+            "title": "Suivez El Tiet !",
+            "text":"Ne manquez pas les photos de nos platos, nos astuces de chef, concours, nouvelles importantes et menu du jour. El Tiet dans votre poche !",
+            "IGbutton-text-alt":"Ouvrir l'Instagram d'El Tiet Taver Teca pour nous suivre",
+            "FBbutton-text-ale":"Oubrir le Facebook d'El Tiet Taver Teca pour nous suivre"
+        },
+        "theend":{
+            "text":"Bon appétit !"
+        }
+    }
+
+   
+ 
+}
