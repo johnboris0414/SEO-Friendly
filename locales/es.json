@@ -4,7 +4,7 @@
         "metadesc": "Taverna gastronomica del eixample de Barcelona, con comida casera y creativa. Tambien takeaway (para llevar) y delivery (a domicilio)",
         "title": "El Tiet Taver Teca - Taverna Gastronomica en Barcelona",
         "logo":{
-            "text-alt":"logo el Tiet Taver teca"
+            "text-alt":"logo El Tiet Taver teca"
         },
         "lang-links":"<a aria-label=\"El Tiet en catala\" class=\"active\" href=\"./\">CAT</a> - <a aria-label=\"El Tiet en español\" href=\"./es/\">ESP</a> - <a aria-label=\"El Tiet in inglish\" href=\"./en/\">EN</a> - <a aria-label=\"El Tiet en français\" href=\"./fr/\">FR</a>",
         "welcome":"Bienvenido a El Tiet!",
@@ -14,31 +14,31 @@
         "modalities":"Restaurante - Takeaway - Delivery",
         "city":"Barcelona",
         "call-alt-text":"Llamar El Tiet para reservar tu mesa o cualquier duda.",
-        "email-alt-text":"Contacta al Tiet Taver Teca por email.",
+        "email-alt-text":"Contacta a El Tiet Taver Teca por email.",
 
         "opendays":"Lunes-Sabado",
         "opendays2": "Viernes y Sabado",
-        "map-text-alt":"Plan Google maps para ubicuar o llegar al Tiet"
+        "map-text-alt":"Plan Google maps para ubicuar o llegar a El Tiet"
     },
     "nav": {
         "top": {
-            "text-alt": "vuelve al inicio, photos, ubicuacion y contacto del Tiet",
+            "text-alt": "vuelve al inicio, photos, ubicuacion y contacto de El Tiet",
             "text-link": ""
         },
         "menu": {
-            "text-alt": "La carta del Tiet",
+            "text-alt": "La carta de El Tiet",
             "text-link": "Carta"
         },
         "story": {
-            "text-alt": "Conoce el Tiet, su cocinero y su historia",
+            "text-alt": "Conoce a El Tiet, su cocinero y su historia",
             "text-link": "El Tiet ?"
         },
         "press": {
-            "text-alt": "Prensa foodie, blogueros y aficionados gastronomicos hablan del Tiet",
+            "text-alt": "Prensa foodie, blogueros y aficionados gastronomicos hablan de El Tiet",
             "text-link": "Prensa"
         },
         "social": {
-            "text-alt": "Unete al Instagram/Facebook del Tiet",
+            "text-alt": "Unete al Instagram/Facebook de El Tiet",
             "text-link": "Siguenos"
         }
      
@@ -49,7 +49,7 @@
         "call-text-alt":"Llamanos para conocer el menu del dia",
         "callus": "Llamanos",
         "text2":"o consultalo por nuestro",
-        "ig-text-alt":"Mira el menu del dia en el Instagram del Tiet Taver Teca",
+        "ig-text-alt":"Mira el menu del dia en el Instagram de El Tiet Taver Teca",
         "pica":{
             "title":"Para picar",
             "i":{
@@ -174,7 +174,7 @@
     },
     "sections":{
         "story":{
-            "title": "Conoce el Tiet",
+            "title": "Conoce a El Tiet",
             "text":"<p>El Tiet sale de la mente de Ivan, nuestro chef (pero chhh, que no le gusta que le llamemos chef).</p> <p> blablabla 2017 bla....</p></p>Un lugar con el espiritu convivial, caloroso y desenfadado de una taverna, donde se puede disfrutar y descubrir platos y tapas tradicionales con un toque creativo, refinado, gastronomico, y sobre todo siempre hecho con cariño !</p><p>Solo o bien acompañado, sean lo que sean tus ganas del momento : tomar una caña con bravas, una fideua, un cochinillo o te sientes atravecido probar un pulpo con mermelada,sea tapas o plato, tradicional o creativo, comillon o pica pica, carne, pescado o verduras, el Tiet taver teca te da la bienvenida y de servira lo que pides,siempre hecho con cariño y gran respeto a los ingredientes, la gastronomia y a los amantes de buena comida.</p>"
         },
         "press":{
@@ -184,8 +184,8 @@
         "social":{
             "title": "Sigue El Tiet !",
             "text":"Ne te pierdes fotos de nuestros platos con trucos de la receta, concursos, noticias importantes y el menu del dia. El Tiet siempre contigo !",
-            "IGbutton-text-alt":"Abre el Instagram del Tiet Taver Teca para seguirnos",
-            "FBbutton-text-ale":"Abre el Facebook del Tiet Taver Teca para seguirnos"
+            "IGbutton-text-alt":"Abre el Instagram de El Tiet Taver Teca para seguirnos",
+            "FBbutton-text-ale":"Abre el Facebook de El Tiet Taver Teca para seguirnos"
         },
         "theend":{
             "text":"Buen provecho !"
