@@ -67,7 +67,7 @@
                 },
                 "anchoa":{
                     "name":"Cantabric anchovy with pan con tomate",
-                    "desc":"Unit. (pan con tomate: tomato bread).r"
+                    "desc":"Unit. (pan con tomate: tomato bread)."
                 },
 
                 "jamon":{
@@ -126,7 +126,7 @@
             "i":{
                 "tartare":{
                     "name":"Tartare Steak",
-                    "desc":"100gr. hand minced raw beef meat , served with small toasts and potato chips."
+                    "desc":"100gr. hand minced raw beef meat, served with small toasts and potato chips."
                 },
                 "foie":{
                     "name":"Foie poele",
