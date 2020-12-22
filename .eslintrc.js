@@ -11,7 +11,7 @@ module.exports = {
   parserOptions : {
     ecmaVersion : 2018,
   },
-  plugins : ['html'],
+
   rules : {
     'brace-style' : 'error',
     'comma-spacing' : ['error',{ 'before' : false,'after' : false }],
