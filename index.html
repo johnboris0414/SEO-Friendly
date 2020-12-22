@@ -1,572 +1,757 @@
 <!DOCTYPE html>
-<html lang-t="page.lang"  data-attr-t>
+<html lang-t="page.lang" data-attr-t>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="Description" content-t="page.metadesc" data-attr-t>
-  <!---//
-  <link href="//fonts.googleapis.com/css?family=Chelsea Market&subset=latin" rel="stylesheet" type="text/css">
-  //--->
-  
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
   <script defer src="https://kit.fontawesome.com/6b6c40cd1a.js" crossorigin="anonymous"></script>
 
-
   <title data-t>page.title</title>
-<style>
-* {
- /*font-family: 'Chelsea Market', sans-serif;*/
- font-family: "Avenir Next", "Avenir", sans-serif;
-}
-
-  *{margin:0;padding:0;box-sizing: border-box;}
-  html{scroll-behavior: smooth;}
-  body{background:#312020;color: rgb(227, 211, 211);font-size:100%;}
-  #wrapper-body{width:100%;padding:0 1em;background:black;}
-
-  nav{
-    position:fixed;
-    z-index: 2;
-    display: flex;
-    bottom:0;
-    width: 100%;
-    background:black;
-    border-top: 1px solid rgb(227, 211, 211);;
-    margin: 0 -1em ;
-    height:5em;
-  }
-
-  nav a{
-    display: inline-block;
-    width: 20%;
-    height: 100%;
-    font-size: .8em;
-    line-height: 5.8em;
-    text-align: center;
-    color:rgb(227, 211, 211);;
-    text-decoration: none;   
-    border-right: 1px solid rgb(227, 211, 211);
-    transition: 0.3s;
-}
-
-  
-  nav  a:last-child{
-    border-right:none;
-  }
-
-  nav a.active{background:#780e00;}
-  h1,h2,h3{font-weight: normal;}
-  h1{font-size: 1.6em;line-height: 1em;}
-  h2{font-size:2em}
-
-  a.discreet,a.button{color: rgb(227, 211, 211);text-decoration: none;}
-  a.discreet.u{display: inline-block;border-bottom: 1px dashed rgb(227, 211, 211);}
-  a.button{font-size:.9em;color:black;display:inline-block;vertical-align: middle;padding:.7em .9em;background-color:#780e00;border-radius: 12em}
-
-
-
-  
-logo img{background: white}
-/* Hack i found to avoid the white border caused by the image */
-logo{position:relative;width:20vw;height:20vw;    max-width: 200px;
-    max-height: 200px; overflow: hidden;}
-logo img{position:absolute;width:120%;height:120%;left:-10%;top:-10%}
-
-#lang{padding :1em 0;text-align: right;color:#827979;}
-#lang a{color:#827979;text-decoration: none;}
-#lang a.active {text-decoration: underline;}
-
-header,section{display: block;}
-
-header {
-  position: relative;
-  margin: 0 -1em ;
-  margin-bottom:2em; 
-}
-
-header video{
-  width:100vw;
-  height:100vw;
-}
-
-
-header .fa-star,header .fa-star-half-alt{color:#fbba25}
-
-header .caption {
-  position: absolute;
-  display:flex;
-  align-items:center;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 100%;
-  padding: 1.2em;
-}
-
-header .caption .text{
-  margin-left:1.2em;
-}
-
-header .caption .text .reviews{
-  margin-top:.2em
-}
-
-section{margin-bottom:3em}
-section .fas{margin-right:.2em}
-section h2{margin-bottom:1em;padding-top:2em;color:#780e00}
-
-section#modalities, section#address,section#horarios {margin-bottom:1em}
-#map{height:30vw}
-
-#address .fa-external-link-alt{margin-left:1em}
-.address-line{display:block;margin-left:1.3em}
-#address .call, #address .mail{margin-top:1em;margin-right:1em;}
-#social .button{font-size: 1.4em;display: block;margin-bottom: 1em;}
-#story p{margin-bottom:1em}
-#social{height:100vh}
-#social p{margin-bottom: 2em;}
-#press ul{list-style: none;}
-#press ul li{margin-bottom:1em}
-#theend{text-align: center;padding: 5em 0;margin-bottom: 0;}
-
-.menu-section{margin-bottom:2.4em;margin-top:2.4em}
-.menu-section h3{font-size: 1.8em;color:#780e00;margin-bottom:.2em}
-.menu-item{display: flex;padding-bottom:3vw;margin-bottom:3vw;border-bottom: 2px dotted white;}
-.item-desc{flex-grow: 4}
-.item-name{font-weight: 500;}
-.item-details{line-height:1em;color:#827979}
-.item-price{font-size: .9em;padding-top:.2em}
-
-
-
-@media all and (min-width: 769px) { /* this should be 762 by bg vid size, but let's stretch by a few pix to keep the  ipads portrait out of it  ... */
-  #wrapper-body{width:768px;margin:auto;position: relative;overflow: hidden;}
-  nav{width:768px;height:3em;top:0;bottom:unset;border-bottom: 1px solid rgb(227, 211, 211);}
-  nav a{line-height:3.8em}
-  nav a:hover{background:#780e00;}
-  body{font-size:140%;margin-top:3em}
-  header video{
-  width:100%;
-  height:100%;
-}
-section{margin-bottom:2em}
-section h2{padding-top:3em}
-}
-@media all and (max-width:360px){ /* FIX : get it all in one line for smaller devices too */
-    a.button{font-size:.8em;padding:.6em .8em;margin-right:.8em !important}
-    h1{font-size: 1.4em;}
-    #press h2 {
-    font-size: 1.6em;
+  <style>
+    * {
+      font-family: "Avenir Next", "Avenir", sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-}
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #312020;
+      color: rgb(227, 211, 211);
+      font-size: 100%;
+    }
+
+    #wrapper-body {
+      width: 100%;
+      padding: 0 1em;
+      background: black;
+    }
+
+    nav {
+      position: fixed;
+      z-index: 2;
+      display: flex;
+      bottom: 0;
+      width: 100%;
+      background: black;
+      border-top: 1px solid rgb(227, 211, 211);
+      ;
+      margin: 0 -1em;
+      height: 5em;
+    }
+
+    nav a {
+      display: inline-block;
+      width: 20%;
+      height: 100%;
+      font-size: .8em;
+      line-height: 5.8em;
+      text-align: center;
+      color: rgb(227, 211, 211);
+      ;
+      text-decoration: none;
+      border-right: 1px solid rgb(227, 211, 211);
+      transition: 0.3s;
+    }
+
+
+    nav a:last-child {
+      border-right: none;
+    }
+
+    nav a.active {
+      background: #780e00;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-weight: normal;
+    }
+
+    h1 {
+      font-size: 1.6em;
+      line-height: 1em;
+    }
+
+    h2 {
+      font-size: 2em
+    }
+
+    a.discreet,
+    a.button {
+      color: rgb(227, 211, 211);
+      text-decoration: none;
+    }
+
+    a.discreet.u {
+      display: inline-block;
+      border-bottom: 1px dashed rgb(227, 211, 211);
+    }
+
+    a.button {
+      font-size: .9em;
+      color: black;
+      display: inline-block;
+      vertical-align: middle;
+      padding: .7em .9em;
+      background-color: #780e00;
+      border-radius: 12em
+    }
+
+    logo img {
+      background: white
+    }
+
+    /* Hack i found to avoid the white border caused by the image */
+    logo {
+      position: relative;
+      width: 20vw;
+      height: 20vw;
+      max-width: 200px;
+      max-height: 200px;
+      overflow: hidden;
+    }
+
+    logo img {
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      left: -10%;
+      top: -10%
+    }
+
+    #lang {
+      padding: 1em 0;
+      text-align: right;
+      color: #827979;
+    }
+
+    #lang a {
+      color: #827979;
+      text-decoration: none;
+    }
+
+    #lang a.active {
+      text-decoration: underline;
+    }
+
+    header,
+    section {
+      display: block;
+    }
+
+    header {
+      position: relative;
+      margin: 0 -1em;
+      margin-bottom: 2em;
+    }
+
+    header video {
+      width: 100vw;
+      height: 100vw;
+    }
+
+
+    header .fa-star,
+    header .fa-star-half-alt {
+      color: #fbba25
+    }
+
+    header .caption {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      color: #f1f1f1;
+      width: 100%;
+      padding: 1.2em;
+    }
+
+    header .caption .text {
+      margin-left: 1.2em;
+    }
+
+    header .caption .text .reviews {
+      margin-top: .2em
+    }
+
+    section {
+      margin-bottom: 3em
+    }
+
+    section .fas {
+      margin-right: .2em
+    }
+
+    section h2 {
+      margin-bottom: 1em;
+      padding-top: 2em;
+      color: #780e00
+    }
+
+    section#modalities,
+    section#address,
+    section#horarios {
+      margin-bottom: 1em
+    }
+
+    #map {
+      height: 30vw
+    }
+
+    #address .fa-external-link-alt {
+      margin-left: 1em
+    }
+
+    .address-line {
+      display: block;
+      margin-left: 1.3em
+    }
+
+    #address .call,
+    #address .mail {
+      margin-top: 1em;
+      margin-right: 1em;
+    }
+
+    #social .button {
+      font-size: 1.4em;
+      display: block;
+      margin-bottom: 1em;
+    }
+
+    #story p {
+      margin-bottom: 1em
+    }
+
+    #social {
+      height: 100vh
+    }
+
+    #social p {
+      margin-bottom: 2em;
+    }
+
+    #press ul {
+      list-style: none;
+    }
+
+    #press ul li {
+      margin-bottom: 1em
+    }
+
+    #theend {
+      text-align: center;
+      padding: 5em 0;
+      margin-bottom: 0;
+    }
+
+    .menu-section {
+      margin-bottom: 2.4em;
+      margin-top: 2.4em
+    }
+
+    .menu-section h3 {
+      font-size: 1.8em;
+      color: #780e00;
+      margin-bottom: .2em
+    }
+
+    .menu-item {
+      display: flex;
+      padding-bottom: 3vw;
+      margin-bottom: 3vw;
+      border-bottom: 2px dotted white;
+    }
+
+    .item-desc {
+      flex-grow: 4
+    }
+
+    .item-name {
+      font-weight: 500;
+    }
+
+    .item-details {
+      line-height: 1em;
+      color: #827979
+    }
+
+    .item-price {
+      font-size: .9em;
+      padding-top: .2em
+    }
 
 
 
-</style>
+    @media all and (min-width: 769px) {
+
+      /* this should be 762 by bg vid size, but let's stretch by a few pix to keep the  ipads portrait out of it  ... */
+      #wrapper-body {
+        width: 768px;
+        margin: auto;
+        position: relative;
+        overflow: hidden;
+      }
+
+      nav {
+        width: 768px;
+        height: 3em;
+        top: 0;
+        bottom: unset;
+        border-bottom: 1px solid rgb(227, 211, 211);
+      }
+
+      nav a {
+        line-height: 3.8em
+      }
+
+      nav a:hover {
+        background: #780e00;
+      }
+
+      body {
+        font-size: 140%;
+        margin-top: 3em
+      }
+
+      header video {
+        width: 100%;
+        height: 100%;
+      }
+
+      section {
+        margin-bottom: 2em
+      }
+
+      section h2 {
+        padding-top: 3em
+      }
+    }
+
+    @media all and (max-width:360px) {
+
+      /* FIX : get it all in one line for smaller devices too */
+      a.button {
+        font-size: .8em;
+        padding: .6em .8em;
+        margin-right: .8em !important
+      }
+
+      h1 {
+        font-size: 1.4em;
+      }
+
+      #press h2 {
+        font-size: 1.6em;
+      }
+    }
+  </style>
 
 </head>
+
 <body id="top">
- 
-<div id="wrapper-body">
-<div id="lang"data-t>page.lang-links</div>
 
-<nav>
-  <a href="#top" aria-label-t="nav.top.text-alt" data-attr-t><i class="fas fa-home"></i></a>
-    <a href="#menu" aria-label-t="nav.menu.text-alt" data-t data-attr-t>nav.menu.text-link</a>    
-    <a href="#story" aria-label-t="nav.story.text-alt" data-t data-attr-t>nav.story.text-link</a>
-    <a href="#press" aria-label-t="nav.press.text-alt" data-t data-attr-t>nav.press.text-link</a>
-    <a href="#social" aria-label-t="nav.social.text-alt" data-t data-attr-t>nav.social.text-link</a>
-    
-</nav>
+  <div id="wrapper-body">
+    <div id="lang" data-t>page.lang-links</div>
+    <nav>
+      <a href="#top" aria-label-t="nav.top.text-alt" data-attr-t><i class="fas fa-home"></i></a>
+      <a href="#menu" aria-label-t="nav.menu.text-alt" data-t data-attr-t>nav.menu.text-link</a>
+      <a href="#story" aria-label-t="nav.story.text-alt" data-t data-attr-t>nav.story.text-link</a>
+      <a href="#press" aria-label-t="nav.press.text-alt" data-t data-attr-t>nav.press.text-link</a>
+      <a href="#social" aria-label-t="nav.social.text-alt" data-t data-attr-t>nav.social.text-link</a>
+    </nav>
 
-<header>
-<video autoplay muted playsinline loop id="myVideo" 
-poster="assets/img/cover-el-tiet-platos.jpg"
-src="assets/vid/el-tiet-presentation-bg.mp4"
->
-</video>
+    <header>
+      <video autoplay muted playsinline loop id="myVideo" poster="assets/img/cover-el-tiet-platos.jpg"
+        src="assets/vid/el-tiet-presentation-bg.mp4">
+      </video>
+      <div class="caption">
+        <logo>
+          <img alt-t="page.logo.text-alt" src="./assets/img/logo.svg" data-attr-t />
+        </logo>
+        <div class="text">
+          <h1 data-t>page.welcome</h1>
+          <p data-t>page.welcome-sub</p>
+          <p class="reviews">4,4 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+              class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+            <a aria-label-t="page.reviews-alt-text" target="_blank" rel="noopener" class="discreet"
+              href="https://g.co/kgs/s7Y23S" data-attr-t>362 <span data-t>page.reviews</span> <i
+                class="fas fa-external-link-alt"></i></a>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section id="modalities" data-t>page.modalities</section>
+
+    <section id="address">
+      <coords>
+
+        <i class="fas fa-map-marker-alt"></i> Calle Corsega 382
+        <span class="address-line">08037 <span data-t>page.city</span></span>
+
+        <br /><a aria-label-t="page.call-alt-text" class="button call" href="tel:+34931410583" data-attr-t>931 41 05
+          83</a> <a aria-label-t="page.email-alt-text" class="button mail" target="_blank" rel="noopener"
+          href="mailto:info@eltiettaverteca.com" data-attr-t>info@eltiettaverteca.com</a>
+        <br />
+      </coords>
+    </section>
+
+    <section id="horarios">
+      <i class="fas fa-clock"></i> <span data-t>page.opendays</span> 13h-15h <br>
+      <span class="address-line"> <span data-t>page.opendays2</span> 20h-23h.</span>
+    </section>
+
+    <section id="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.833616566342!2d2.161181515426157!3d41.39941957926299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a29515f01531%3A0xcef4e0a4c95c4398!2sEl%20Tiet%20Taver%20Teca!5e0!3m2!1sen!2ses!4v1608283260493!5m2!1sen!2ses"
+        title-t="page.map-text-alt" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""
+        aria-hidden="false" tabindex="0" data-attr-t></iframe>
+    </section>
+
+    <section id="menu">
+      <h2><i class="fas fa-utensils"></i> <span data-t>menu.title</span></h2>
+      <i><span data-t>menu.text</span>
+        <br /> <a aria-label-t="menu.call-text-alt" target="_blank" rel="noopener nofollow" class="discreet u"
+          href="tel:+34931410583" data-attr-t data-t>menu.callus</a> <span data-t>menu.text2</span> <a
+          aria-label-t="menu.ig-text-alt" target="_blank" rel="noopener nofollow" class="discreet u"
+          href="https://www.instagram.com/eltiet_382/" data-attr-t>Instagram</a>.)</i>
+
+      <div id="menu-wrapper">
+        <div class="menu-section">
+          <h3 data-t>menu.pica.title</h3>
+
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.bravas.name</div>
+              <div class="item-details" data-t>menu.pica.i.bravas.desc</div>
+            </div>
+            <div class="item-price">
+              4,15
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.salad.name</div>
+              <div class="item-details" data-t>menu.pica.i.salad.desc</div>
+            </div>
+            <div class="item-price">
+              5,40
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.hummus.name</div>
+              <div class="item-details" data-t>menu.pica.i.hummus.desc</div>
+            </div>
+            <div class="item-price">
+              3,90
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.anchoa.name</div>
+              <div class="item-details" data-t>menu.pica.i.anchoa.desc</div>
+            </div>
+            <div class="item-price">
+              1,90
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.jamon.name</div>
+              <div class="item-details" data-t>menu.pica.i.jamon.desc</div>
+            </div>
+            <div class="item-price">
+              8,50
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.cecina.name</div>
+              <div class="item-details" data-t>menu.pica.i.cecina.desc</div>
+            </div>
+            <div class="item-price">
+              8,90
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.croc.name</div>
+              <div class="item-details" data-t>menu.pica.i.croc.desc</div>
+            </div>
+            <div class="item-price">
+              1,50
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.burrata.name</div>
+              <div class="item-details" data-t>menu.pica.i.burrata.desc</div>
+            </div>
+            <div class="item-price">
+              9,90
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.sardina.name</div>
+              <div class="item-details" data-t>menu.pica.i.sardina.desc</div>
+            </div>
+            <div class="item-price">
+              9,10
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.fritura.name</div>
+              <div class="item-details" data-t>menu.pica.i.fritura.desc</div>
+            </div>
+            <div class="item-price">
+              -
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.pollo.name</div>
+              <div class="item-details" data-t>menu.pica.i.pollo.desc</div>
+            </div>
+            <div class="item-price">
+              6,70
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.huego.name</div>
+              <div class="item-details" data-t>menu.pica.i.huego.desc</div>
+            </div>
+            <div class="item-price">
+              4,80
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.hueda.name</div>
+              <div class="item-details" data-t>menu.pica.i.hueda.desc</div>
+            </div>
+            <div class="item-price">
+              4,90
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.huemon.name</div>
+              <div class="item-details" data-t>menu.pica.i.huemon.desc</div>
+            </div>
+            <div class="item-price">
+              5,60
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.huemium.name</div>
+              <div class="item-details" data-t>menu.pica.i.huemium.desc</div>
+            </div>
+            <div class="item-price">
+              5,80
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.pica.i.huefoie.name</div>
+              <div class="item-details" data-t>menu.pica.i.huefoie.desc</div>
+            </div>
+            <div class="item-price">
+              9,20
+            </div>
+          </div>
+
+        </div>
+
+        <div class="menu-section">
+          <h3 data-t>menu.meat.title</h3>
+
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.meat.i.tartare.name</div>
+              <div class="item-details" data-t>menu.meat.i.tartare.desc</div>
+            </div>
+            <div class="item-price">
+              8
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.meat.i.foie.name</div>
+              <div class="item-details" data-t>menu.meat.i.foie.desc</div>
+            </div>
+            <div class="item-price">
+              13,50
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.meat.i.rubia.name</div>
+              <div class="item-details" data-t>menu.meat.i.rubia.desc</div>
+            </div>
+            <div class="item-price">
+              15,90
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.meat.i.trubia.name</div>
+              <div class="item-details" data-t>menu.meat.i.trubia.desc</div>
+            </div>
+            <div class="item-price">
+              14,90
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.meat.i.pibil.name</div>
+              <div class="item-details" data-t>menu.meat.i.pibil.desc</div>
+            </div>
+            <div class="item-price">
+              9,80
+            </div>
+          </div>
+
+        </div>
+
+        <div class="menu-section">
+          <h3 data-t>menu.fish.title</h3>
+
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.fish.i.tallarines.name</div>
+              <div class="item-details" data-t>menu.fish.i.tallarines.desc</div>
+            </div>
+            <div class="item-price">
+              9,90
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.fish.i.pulpo.name</div>
+              <div class="item-details" data-t>menu.fish.i.pulpo.desc</div>
+            </div>
+            <div class="item-price">
+              9,60
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.fish.i.gamba.name</div>
+              <div class="item-details" data-t>menu.fish.i.gamba.desc</div>
+            </div>
+            <div class="item-price">
+              12,90
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.fish.i.bacalao.name</div>
+              <div class="item-details" data-t>menu.fish.i.bacalao.desc</div>
+            </div>
+            <div class="item-price">
+              13,90
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="item-desc">
+              <div class="item-name" data-t>menu.fish.i.rodaballo.name</div>
+              <div class="item-details" data-t>menu.fish.i.rodaballo.desc</div>
+            </div>
+            <div class="item-price">
+              17,90
+            </div>
+          </div>
+
+        </div>
 
 
-<div class="caption">
-  <logo>
-    <img alt-t="page.logo.text-alt" src="./assets/img/logo.svg" data-attr-t/>
-  </logo>
-  <div class="text">
-  <h1 data-t>page.welcome</h1>
-  <p data-t>page.welcome-sub</p>
-  <p class="reviews">4,4 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 
-    <a aria-label-t="page.reviews-alt-text" target="_blank" rel="noopener" class="discreet" href="https://g.co/kgs/s7Y23S" data-attr-t>362 <span data-t>page.reviews</span> <i class="fas fa-external-link-alt"></i></a></p>
-</div>
-</div> 
-</header>
-
-
-<section id="modalities" data-t>page.modalities</section>
-<section id="address">
-<coords>
-
-  <i class="fas fa-map-marker-alt"></i> Calle Corsega 382 
-  <span class="address-line">08037 <span data-t>page.city</span></span>
-
-  <br/><a aria-label-t="page.call-alt-text" class="button call" href="tel:+34931410583" data-attr-t>931 41 05 83</a> <a aria-label-t="page.email-alt-text" class="button mail" target="_blank" rel="noopener" href="mailto:info@eltiettaverteca.com" data-attr-t>info@eltiettaverteca.com</a>
-  <br/>
-  </coords>
-</section>
-
-<section id="horarios"> 
-  <i class="fas fa-clock"></i> <span data-t>page.opendays</span> 13h-15h <br> 
-  <span class="address-line"> <span data-t>page.opendays2</span> 20h-23h.</span>
-</section>
-
-<section id="map">
-  <iframe 
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.833616566342!2d2.161181515426157!3d41.39941957926299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a29515f01531%3A0xcef4e0a4c95c4398!2sEl%20Tiet%20Taver%20Teca!5e0!3m2!1sen!2ses!4v1608283260493!5m2!1sen!2ses" 
-  title-t="page.map-text-alt"
-  width="100%" 
-  height="100%" 
-  frameborder="0" 
-  style="border:0;" 
-  allowfullscreen="" 
-  aria-hidden="false" 
-  tabindex="0"
-  data-attr-t></iframe>
-</section>
-
-
-<section id="menu">
-  <h2><i class="fas fa-utensils"></i> <span data-t>menu.title</span></h2>
-  <i><span data-t>menu.text</span>
-  <br/> <a aria-label-t="menu.call-text-alt" target="_blank" rel="noopener nofollow" class="discreet u" href="tel:+34931410583" data-attr-t data-t>menu.callus</a> <span data-t>menu.text2</span> <a aria-label-t="menu.ig-text-alt" target="_blank" rel="noopener nofollow" class="discreet u" href="https://www.instagram.com/eltiet_382/" data-attr-t>Instagram</a>.)</i>
-
-    <div id="menu-wrapper">
-      <div class="menu-section">
-        <h3 data-t>menu.pica.title</h3>
-        
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.bravas.name</div>
-            <div class="item-details" data-t>menu.pica.i.bravas.desc</div>
-          </div>
-          <div class="item-price">
-            4,15
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.salad.name</div>
-            <div class="item-details" data-t>menu.pica.i.salad.desc</div>
-          </div>
-          <div class="item-price">
-            5,40
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.hummus.name</div>
-            <div class="item-details" data-t>menu.pica.i.hummus.desc</div>
-          </div>
-          <div class="item-price">
-            3,90
-          </div>
-        </div>
-  
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.anchoa.name</div>
-            <div class="item-details" data-t>menu.pica.i.anchoa.desc</div>
-          </div>
-          <div class="item-price">
-            1,90
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.jamon.name</div>
-            <div class="item-details" data-t>menu.pica.i.jamon.desc</div>
-          </div>
-          <div class="item-price">
-           8,50
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.cecina.name</div>
-            <div class="item-details" data-t>menu.pica.i.cecina.desc</div>
-          </div>
-          <div class="item-price">
-          8,90
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.croc.name</div>
-            <div class="item-details" data-t>menu.pica.i.croc.desc</div>
-          </div>
-          <div class="item-price">
-            1,50
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.burrata.name</div>
-            <div class="item-details" data-t>menu.pica.i.burrata.desc</div>
-          </div>
-          <div class="item-price">
-            9,90
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.sardina.name</div>
-            <div class="item-details" data-t>menu.pica.i.sardina.desc</div>
-          </div>
-          <div class="item-price">
-            9,10
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.fritura.name</div>
-            <div class="item-details" data-t>menu.pica.i.fritura.desc</div>
-          </div>
-          <div class="item-price">
-            -
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.pollo.name</div>
-            <div class="item-details" data-t>menu.pica.i.pollo.desc</div>
-          </div>
-          <div class="item-price">
-            6,70
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.huego.name</div>
-            <div class="item-details" data-t>menu.pica.i.huego.desc</div>
-          </div>
-          <div class="item-price">
-            4,80
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.hueda.name</div>
-            <div class="item-details" data-t>menu.pica.i.hueda.desc</div>
-          </div>
-          <div class="item-price">
-            4,90
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.huemon.name</div>
-            <div class="item-details" data-t>menu.pica.i.huemon.desc</div>
-          </div>
-          <div class="item-price">
-            5,60
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.huemium.name</div>
-            <div class="item-details" data-t>menu.pica.i.huemium.desc</div>
-          </div>
-          <div class="item-price">
-            5,80
-          </div>
-        </div>
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.pica.i.huefoie.name</div>
-            <div class="item-details" data-t>menu.pica.i.huefoie.desc</div>
-          </div>
-          <div class="item-price">
-            9,20
-          </div>
-        </div>
-     
       </div>
 
-      <div class="menu-section">
-        <h3 data-t>menu.meat.title</h3>
-        
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.meat.i.tartare.name</div>
-            <div class="item-details" data-t>menu.meat.i.tartare.desc</div>
-          </div>
-          <div class="item-price">
-            8
-          </div>
-        </div> 
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.meat.i.foie.name</div>
-            <div class="item-details" data-t>menu.meat.i.foie.desc</div>
-          </div>
-          <div class="item-price">
-            13,50
-          </div>
-        </div> 
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.meat.i.rubia.name</div>
-            <div class="item-details" data-t>menu.meat.i.rubia.desc</div>
-          </div>
-          <div class="item-price">
-            15,90
-          </div>
-        </div> 
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.meat.i.trubia.name</div>
-            <div class="item-details" data-t>menu.meat.i.trubia.desc</div>
-          </div>
-          <div class="item-price">
-            14,90
-          </div>
-        </div> 
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.meat.i.pibil.name</div>
-            <div class="item-details" data-t>menu.meat.i.pibil.desc</div>
-          </div>
-          <div class="item-price">
-            9,80
-          </div>
-        </div> 
-       
-      </div>
-      
-      <div class="menu-section">
-        <h3 data-t>menu.fish.title</h3>
-        
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.fish.i.tallarines.name</div>
-            <div class="item-details" data-t>menu.fish.i.tallarines.desc</div>
-          </div>
-          <div class="item-price">
-            9,90
-          </div>
-        </div> 
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.fish.i.pulpo.name</div>
-            <div class="item-details" data-t>menu.fish.i.pulpo.desc</div>
-          </div>
-          <div class="item-price">
-            9,60
-          </div>
-        </div> 
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.fish.i.gamba.name</div>
-            <div class="item-details" data-t>menu.fish.i.gamba.desc</div>
-          </div>
-          <div class="item-price">
-            12,90
-          </div>
-        </div> 
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.fish.i.bacalao.name</div>
-            <div class="item-details" data-t>menu.fish.i.bacalao.desc</div>
-          </div>
-          <div class="item-price">
-            13,90
-          </div>
-        </div> 
-        <div class="menu-item">
-          <div class="item-desc">
-            <div class="item-name" data-t>menu.fish.i.rodaballo.name</div>
-            <div class="item-details" data-t>menu.fish.i.rodaballo.desc</div>
-          </div>
-          <div class="item-price">
-            17,90
-          </div>
-        </div> 
-       
-      </div>   
-      
 
-    </div>
+    </section>
 
+    <section id="story">
+      <h2><i class="fas fa-book-open"></i> <span data-t>sections.story.title</span></h2>
+      <div data-t>sections.story.text</div>
+    </section>
 
-</section>
+    <section id="press">
+      <h2><i class="fas fa-glass-cheers"></i> <span data-t>sections.press.title</span></h2>
+      <ul>
+        <li><a rel="noopener nofollow" target="_blank" class="discreet"
+            href="https://www.gastronomistas.com/restaurante-el-tiet-barcelona/"
+            aria-label-t="sections.press.link-text-alt" data-attr-t>
+            <strong><i class="fas fa-external-link-alt"></i> Gastronomistas</strong>
+            <br />"Mi último gran descubrimiento: el restaurante El Tiet"
+          </a>
+        </li>
+        <li><a rel="noopener nofollow" target="_blank" class="discreet"
+            href="https://culinarybackstreets.com/cities-category/barcelona/2014/el-tiet-taver-teca/"
+            aria-label-t="sections.press.link-text-alt" data-attr-t>
+            <strong><i class="fas fa-external-link-alt"></i> Culinarybackstreets</strong>
+            <br />"El Tiet Taver Teca : Our favorite Uncle"
+          </a>
+        </li>
+        <li><a rel="noopener nofollow" target="_blank" class="discreet"
+            href="http://brillat-savarin.blogspot.com/2015/05/el-tiet.html?m=1"
+            aria-label-t="sections.press.link-text-alt" data-attr-t>
+            <strong><i class="fas fa-external-link-alt"></i> Brillat-savarin</strong>
+            <br />"En pocas palabras: Paradigma de la buena relación calidad-precio."
+          </a>
+        </li>
+        <li><a rel="noopener nofollow" target="_blank" class="discreet"
+            href="http://hedofoodia.blogspot.com/2018/09/el-tiet-taver-teca-barcelone.html?m=1"
+            aria-label-t="sections.press.link-text-alt" data-attr-t>
+            <strong><i class="fas fa-external-link-alt"></i> Hedofoodia</strong>
+            <br />"Une très sympathique adresse pour des classiques améliorés, avec bien entendu plein d’autres mets
+            délicats parfaitement cuisinés"
+          </a>
+        </li>
+        <li><a rel="noopener nofollow" target="_blank" class="discreet"
+            href="https://www.elperiodico.com/es/cata-mayor/20171130/mejores-patatas-bravas-restaurantes-barcelona-6453432"
+            aria-label-t="sections.press.link-text-alt" data-attr-t>
+            <strong><i class="fas fa-external-link-alt"></i> El periodico</strong>
+            <br />"Las patatas mas bravas de Barcelona"
+          </a>
+        </li>
+      </ul>
+    </section>
 
-<section id="story">
-  <h2><i class="fas fa-book-open"></i> <span data-t>sections.story.title</span></h2>
- 
-  <div data-t>sections.story.text</div>
-</section>
+    <section id="social">
+      <h2 data-t>sections.social.title</h2>
+      <p data-t>sections.social.text</p>
+      <a aria-label-t="sections.social.IGbutton-text-alt" target="_blank" rel="noopener nofollow"
+        href="https://www.instagram.com/eltiet_382/" class="button" data-attr-t> <i class="fab fa-instagram"></i>
+        eltiet_382</a>
+      <a aria-label-t="sections.social.FBbutton-text-alt" target="_blank" rel="noopener nofollow" href="" class="button"
+        data-attr-t><i class="fab fa-facebook-square"></i> eltiettaverteca</a>
+    </section>
 
-<section id="press">
-  <h2><i class="fas fa-glass-cheers"></i> <span data-t>sections.press.title</span></h2>
-
-  <ul>
-    <li><a rel="noopener nofollow" target="_blank" class="discreet"
-      href="https://www.gastronomistas.com/restaurante-el-tiet-barcelona/"
-      aria-label-t="sections.press.link-text-alt" data-attr-t>
-      <strong><i class="fas fa-external-link-alt"></i> Gastronomistas</strong> 
-      <br/>"Mi último gran descubrimiento: el restaurante El Tiet"
-    </a>
-  </li>
-
-  <li><a rel="noopener nofollow" target="_blank" class="discreet"
-    href="https://culinarybackstreets.com/cities-category/barcelona/2014/el-tiet-taver-teca/"
-    aria-label-t="sections.press.link-text-alt" data-attr-t>
-    <strong><i class="fas fa-external-link-alt"></i> Culinarybackstreets</strong> 
-    <br/>"El Tiet Taver Teca : Our favorite Uncle"
-  </a>
-</li>
- 
-<li><a rel="noopener nofollow" target="_blank" class="discreet"
-  href="http://brillat-savarin.blogspot.com/2015/05/el-tiet.html?m=1"
-  aria-label-t="sections.press.link-text-alt" data-attr-t>
-  <strong><i class="fas fa-external-link-alt"></i> Brillat-savarin</strong> 
-  <br/>"En pocas palabras: Paradigma de la buena relación calidad-precio."
-</a>
-</li>
-
-<li><a rel="noopener nofollow" target="_blank" class="discreet"
-  href="http://hedofoodia.blogspot.com/2018/09/el-tiet-taver-teca-barcelone.html?m=1"
-  aria-label-t="sections.press.link-text-alt" data-attr-t>
-  <strong><i class="fas fa-external-link-alt"></i> Hedofoodia</strong> 
-  <br/>"Une très sympathique adresse pour des classiques améliorés, avec bien entendu plein d’autres mets délicats parfaitement cuisinés"
-</a>
-</li>
-
-<li><a rel="noopener nofollow" target="_blank" class="discreet"
-  href="https://www.elperiodico.com/es/cata-mayor/20171130/mejores-patatas-bravas-restaurantes-barcelona-6453432"
-  aria-label-t="sections.press.link-text-alt" data-attr-t>
-  <strong><i class="fas fa-external-link-alt"></i> El periodico</strong> 
-  <br/>"Las patatas mas bravas de Barcelona"
-</a>
-</li>
-
-   
- </ul>
-</section>
- 
-<section id="social">
- <h2 data-t>sections.social.title</h2>
- <p data-t>sections.social.text</p>
- <a aria-label-t="sections.social.IGbutton-text-alt" target="_blank" rel="noopener nofollow" href="https://www.instagram.com/eltiet_382/" class="button" data-attr-t> <i class="fab fa-instagram"></i> eltiet_382</a>
- <a aria-label-t="sections.social.FBbutton-text-alt" target="_blank" rel="noopener nofollow" href="" class="button" data-attr-t><i class="fab fa-facebook-square"></i> eltiettaverteca</a> 
-</section>
-  
-<section id ="theend" data-t>sections.theend.text</section>
-</div>
+    <section id="theend" data-t>sections.theend.text</section>
+  </div>
 
 </body>
 <script>
@@ -574,7 +759,7 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
   if (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) {
 
     var scrollInterval;
-  
+
     const scrollToTarget = function (e) {
       e.preventDefault();
       clearInterval(scrollInterval);
@@ -582,7 +767,7 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
       const target = document.querySelector(this.hash);
       var scrollDistance = target.offsetTop - window.scrollY;
       if (!scrollDistance) return;
-  
+
       var direction = scrollDistance > 0 ? 1 : -1;
       scrollInterval = setInterval(() => {
 
@@ -591,47 +776,47 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
           // TODO : deceleration
           scrollStep = Math.abs(scrollDistance);
         }
-  
-        window.scrollTo(0,window.scrollY + direction * scrollStep);
-  
+
+        window.scrollTo(0, window.scrollY + direction * scrollStep);
+
         scrollDistance = target.offsetTop - window.scrollY;
         if (scrollDistance === 0) {
           console.log('stop');
           clearInterval(scrollInterval);
         }
 
-      },20); // 40 = 25IPS. Human eye. But not fluid. and speed not reliable
+      }, 20); // 40 = 25IPS. Human eye. But not fluid. and speed not reliable
     };
-  
-    document.querySelectorAll('nav a').forEach(e => e.addEventListener('click',scrollToTarget,e));
+
+    document.querySelectorAll('nav a').forEach(e => e.addEventListener('click', scrollToTarget, e));
   }
 
   document.querySelectorAll('nav a').forEach(e => {
     var targetOffset = document.querySelector(e.hash).offsetTop;
-    e.setAttribute('data-target-scrollY',targetOffset);
+    e.setAttribute('data-target-scrollY', targetOffset);
   });
 
   var winLastScrollY = -1;
   const menu = Array.from(document.querySelectorAll('nav a')).reverse();
 
   const autoSelectMenuItem = () => {
-  
+
     if (winLastScrollY === window.scrollY) return;
     winLastScrollY = window.scrollY;
 
-    for (let i = 0;i < menu.length;i++) {
+    for (let i = 0; i < menu.length; i++) {
       const e = menu[i];
       if (winLastScrollY >= e.getAttribute('data-target-scrollY')) {
         const currentHash = e.hash;
-        menu.filter(e => e.classList.contains('active') && e.hash !== currentHash).forEach(e=>e.classList.remove('active'));
+        menu.filter(e => e.classList.contains('active') && e.hash !== currentHash).forEach(e => e.classList.remove('active'));
         e.classList.add('active');
         break;
       }
-  }
+    }
 
   };
-  
-  var autoScrollAction = setInterval(autoSelectMenuItem,300);
+
+  var autoScrollAction = setInterval(autoSelectMenuItem, 300);
   var manualScrollAction;
 
   // When clicking on menu, remove this interval, and read it when done.
@@ -641,22 +826,22 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
     clearInterval(manualScrollAction);
 
     const currentHash = this.hash;
-    menu.filter(e => e.classList.contains('active') && e.hash !== currentHash).forEach(e=>e.classList.remove('active'));
+    menu.filter(e => e.classList.contains('active') && e.hash !== currentHash).forEach(e => e.classList.remove('active'));
     this.classList.add('active');
 
     var winLastScrollY = window.scrollY;
-    manualScrollAction = setInterval(()=>{
+    manualScrollAction = setInterval(() => {
       if (winLastScrollY === window.scrollY) {
         console.log('auto selection active from manual selection func');
-        autoScrollAction = setInterval(autoSelectMenuItem,500);
+        autoScrollAction = setInterval(autoSelectMenuItem, 500);
         clearInterval(manualScrollAction);
         // console.log(activeIntervals)
       }
       winLastScrollY = window.scrollY;
-    },100);
+    }, 100);
   };
 
-  document.querySelectorAll('nav a').forEach(e => e.addEventListener('click',manualSelectMenuItem,e));
-  
- </script>
+  document.querySelectorAll('nav a').forEach(e => e.addEventListener('click', manualSelectMenuItem, e));
+</script>
+
 </html>
