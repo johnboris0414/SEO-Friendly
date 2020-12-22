@@ -79,6 +79,8 @@ logo{position:relative;width:20vw;height:20vw;    max-width: 200px;
 logo img{position:absolute;width:120%;height:120%;left:-10%;top:-10%}
 
 #lang{padding :1em 0;text-align: right;color:#827979;}
+#lang a{color:#827979;text-decoration: none;}
+#lang a.active {text-decoration: underline;}
 
 header,section{display: block;}
 
@@ -173,7 +175,10 @@ section h2{padding-top:3em}
  
 <div id="wrapper-body">
 <div id="lang">
-CAT - <u>ESP</u> - EN - FR
+<a aria-label="El Tiet en catala" class="active" href="./">CAT</a> - 
+<a aria-label="El Tiet en español" href="./es/">ESP</a> - 
+<a aria-label="El Tiet in inglish" href="./en/">EN</a> - 
+<a aria-label="El Tiet en français" href="./fr/">FR</a>
 </div>
 
 <nav>
