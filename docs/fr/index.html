@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="Description" content="Taverne gastronomique située dans le quartier de l'eixample de Barcelona, cuisine à la fois traditionnelle et creative. Egalement à emporter et à domicile.">
+  <!---//
+  <link href="//fonts.googleapis.com/css?family=Chelsea Market&subset=latin" rel="stylesheet" type="text/css">
+  //--->
+  
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+  <script defer src="https://kit.fontawesome.com/6b6c40cd1a.js" crossorigin="anonymous"></script>
+
+
+  <title>El Tiet Taver Teca - Taverna Gastronomica en Barcelona</title>
+<style>
+* {
+ /*font-family: 'Chelsea Market', sans-serif;*/
+ font-family: "Avenir Next", "Avenir", sans-serif;
+}
+
+  *{margin:0;padding:0;box-sizing: border-box;}
+  html{scroll-behavior: smooth;}
+  body{background:#312020;color: rgb(227, 211, 211);font-size:100%;}
+  #wrapper-body{width:100%;padding:0 1em;background:black;}
+
+  nav{
+    position:fixed;
+    z-index: 2;
+    display: flex;
+    bottom:0;
+    width: 100%;
+    background:black;
+    border-top: 1px solid rgb(227, 211, 211);;
+    margin: 0 -1em ;
+    height:5em;
+  }
+
+  nav a{
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+    font-size: .8em;
+    line-height: 5.8em;
+    text-align: center;
+    color:rgb(227, 211, 211);;
+    text-decoration: none;   
+    border-right: 1px solid rgb(227, 211, 211);
+    transition: 0.3s;
+}
+
+  
+  nav  a:last-child{
+    border-right:none;
+  }
+
+  nav a.active{background:#780e00;}
+  h1,h2,h3{font-weight: normal;}
+  h1{font-size: 1.6em;line-height: 1em;}
+  h2{font-size:2em}
+
+  a.discreet,a.button{color: rgb(227, 211, 211);text-decoration: none;}
+  a.discreet.u{display: inline-block;border-bottom: 1px dashed rgb(227, 211, 211);}
+  a.button{font-size:.9em;color:black;display:inline-block;vertical-align: middle;padding:.7em .9em;background-color:#780e00;border-radius: 12em}
+
+
+
+  
+logo img{background: white}
+/* Hack i found to avoid the white border caused by the image */
+logo{position:relative;width:20vw;height:20vw;    max-width: 200px;
+    max-height: 200px; overflow: hidden;}
+logo img{position:absolute;width:120%;height:120%;left:-10%;top:-10%}
+
+#lang{padding :1em 0;text-align: right;color:#827979;}
+#lang a{color:#827979;text-decoration: none;}
+#lang a.active {text-decoration: underline;}
+
+header,section{display: block;}
+
+header {
+  position: relative;
+  margin: 0 -1em ;
+  margin-bottom:2em; 
+}
+
+header video{
+  width:100vw;
+  height:100vw;
+}
+
+
+header .fa-star,header .fa-star-half-alt{color:#fbba25}
+
+header .caption {
+  position: absolute;
+  display:flex;
+  align-items:center;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 1.2em;
+}
+
+header .caption .text{
+  margin-left:1.2em;
+}
+
+header .caption .text .reviews{
+  margin-top:.2em
+}
+
+section{margin-bottom:3em}
+section .fas{margin-right:.2em}
+section h2{margin-bottom:1em;padding-top:2em;color:#780e00}
+
+section#modalities, section#address,section#horarios {margin-bottom:1em}
+#map{height:30vw}
+
+#address .fa-external-link-alt{margin-left:1em}
+.address-line{display:block;margin-left:1.3em}
+#address .call, #address .mail{margin-top:1em;margin-right:1em;}
+#social .button{font-size: 1.4em;display: block;margin-bottom: 1em;}
+#story p{margin-bottom:1em}
+#social{height:100vh}
+#social p{margin-bottom: 2em;}
+#press ul{list-style: none;}
+#press ul li{margin-bottom:1em}
+#theend{text-align: center;padding: 5em 0;margin-bottom: 0;}
+
+.menu-section{margin-bottom:2.4em;margin-top:2.4em}
+.menu-section h3{font-size: 1.8em;color:#780e00;margin-bottom:.2em}
+.menu-item{display: flex;padding-bottom:3vw;margin-bottom:3vw;border-bottom: 2px dotted white;}
+.item-desc{flex-grow: 4}
+.item-name{font-weight: 500;}
+.item-details{line-height:1em;color:#827979}
+.item-price{font-size: .9em;padding-top:.2em}
+
+
+
+@media all and (min-width: 769px) { /* this should be 762 by bg vid size, but let's stretch by a few pix to keep the  ipads portrait out of it  ... */
+  #wrapper-body{width:768px;margin:auto;position: relative;overflow: hidden;}
+  nav{width:768px;height:3em;top:0;bottom:unset;border-bottom: 1px solid rgb(227, 211, 211);}
+  nav a{line-height:3.8em}
+  nav a:hover{background:#780e00;}
+  body{font-size:140%;margin-top:3em}
+  header video{
+  width:100%;
+  height:100%;
+}
+section{margin-bottom:2em}
+section h2{padding-top:3em}
+}
+@media all and (max-width:360px){ /* FIX : get it all in one line for smaller devices too */
+    a.button{font-size:.8em;padding:.6em .8em;margin-right:.8em !important}
+    h1{font-size: 1.4em;}
+    #press h2 {
+    font-size: 1.6em;
+    }
+}
+
+
+
+</style>
+
+</head>
+<body id="top">
+ 
+<div id="wrapper-body">
+<div id="lang"><a aria-label="El Tiet en catala" href="../">CAT</a> - <a aria-label="El Tiet en español" href="../es/">ESP</a> - <a aria-label="El Tiet in english" href="../en/">EN</a> - <a aria-label="El Tiet en français" class="active" href="./">FR</a></div>
+
+<nav>
+  <a href="#top" aria-label="Retour à l'accueil, photos, plans, adresse et contacts d'El Tiet"><i class="fas fa-home"></i></a>
+    <a href="#menu" aria-label="La carte d'El Tiet">Carte</a>    
+    <a href="#story" aria-label="Découvrez El Tiet, sa cuisine et son histoire">El Tiet ?</a>
+    <a href="#press" aria-label="Presse foodie, blogueurs y amateurs de gastronomie parlent d'El Tiet">Presse</a>
+    <a href="#social" aria-label="Joignez-vou à l'Instagram/Facebook d'El Tiet">Suivez-nous</a>
+    
+</nav>
+
+<header>
+<video autoplay muted playsinline loop id="myVideo" poster="assets/img/cover-el-tiet-platos.jpg" src="../assets/vid/el-tiet-presentation-bg.mp4">
+</video>
+
+
+<div class="caption">
+  <logo>
+    <img src=".././assets/img/logo.svg" alt="logo El Tiet Taver teca">
+  </logo>
+  <div class="text">
+  <h1>Bienvenue à El Tiet!</h1>
+  <p>Taverne gastronomique</p>
+  <p class="reviews">4,4 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 
+    <a target="_blank" rel="noopener" class="discreet" href="https://g.co/kgs/s7Y23S" aria-label="Voir les avis Google du restaurant El Tiet">362 <span>avis</span> <i class="fas fa-external-link-alt"></i></a></p>
+</div>
+</div> 
+</header>
+
+
+<section id="modalities">Restaurant - A emporter - A domicile</section>
+<section id="address">
+<coords>
+
+  <i class="fas fa-map-marker-alt"></i> Calle Corsega 382 
+  <span class="address-line">08037 <span>Barcelone</span></span>
+
+  <br><a class="button call" href="tel:+34931410583" aria-label="Appeler El Tiet pour réserver votre table, ou poser une question.">931 41 05 83</a> <a class="button mail" target="_blank" rel="noopener" href="mailto:info@eltiettaverteca.com" aria-label="Contacter El Tiet Taver Teca par email.">info@eltiettaverteca.com</a>
+  <br>
+  </coords>
+</section>
+
+<section id="horarios"> 
+  <i class="fas fa-clock"></i> <span>Lundi-Samedi</span> 13h-15h <br> 
+  <span class="address-line"> <span>Vendredi et Samedi</span> 20h-23h.</span>
+</section>
+
+<section id="map">
+  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.833616566342!2d2.161181515426157!3d41.39941957926299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a29515f01531%3A0xcef4e0a4c95c4398!2sEl%20Tiet%20Taver%20Teca!5e0!3m2!1sen!2ses!4v1608283260493!5m2!1sen!2ses" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false" tabindex="0" title="Plan Google maps pour vous situer ou arriver à El Tiet"></iframe>
+</section>
+
+
+<section id="menu">
+  <h2><i class="fas fa-utensils"></i> <span>Notre Carte</span></h2>
+  <i><span>El Tiet propose également un menu du jour le midi en semaine, pain boisson et dessert inclus, pour 11,50.</span>
+  <br> <a target="_blank" rel="noopener nofollow" class="discreet u" href="tel:+34931410583" aria-label="Appellez nous pour connaitre le menu du jour">Appellez-nous</a> <span>ou consultez le menu du jour sur notre </span> <a target="_blank" rel="noopener nofollow" class="discreet u" href="https://www.instagram.com/eltiet_382/" aria-label="Consultez le menu du jour sur l'Instagram d'El Tiet Taver Teca">Instagram</a>.)</i>
+
+    <div id="menu-wrapper">
+      <div class="menu-section">
+        <h3>Tapas</h3>
+        
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Bravas "El Tiet"</div>
+            <div class="item-details">Patatas bravas, coupées en dés et acompagnées de nos sauces.</div>
+          </div>
+          <div class="item-price">
+            4,15
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Salade Russe</div>
+            <div class="item-details">Pommes de terre, oeufs durs, ventrèche de thon, olives, petits poivrons "pimiento del piquillo", mayonnaise et picos (pain).</div>
+          </div>
+          <div class="item-price">
+            5,40
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Hummus et papadum</div>
+            <div class="item-details">Le papadum es una galette faite avec de la farine de pois chiche.</div>
+          </div>
+          <div class="item-price">
+            3,90
+          </div>
+        </div>
+  
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Anchois de Cantabrie avec pain à la tomate</div>
+            <div class="item-details">La pièce.</div>
+          </div>
+          <div class="item-price">
+            1,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Jambon Ibérique avec pain à la tomate</div>
+            <div class="item-details">50 gr. de jambon iberique avec pain à la tomate.</div>
+          </div>
+          <div class="item-price">
+           8,50
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Cecina de León</div>
+            <div class="item-details">aux copeaux de Parmesan.</div>
+          </div>
+          <div class="item-price">
+          8,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Croquete maison de ragoût</div>
+            <div class="item-details">La pièce.</div>
+          </div>
+          <div class="item-price">
+            1,50
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Burrata à l'huile de tomates sèches, jambon ibérique et fruits secs</div>
+            <div class="item-details">Variante possible sans jambon.</div>
+          </div>
+          <div class="item-price">
+            9,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Coca de sardine fumée</div>
+            <div class="item-details">Sur pain de coca (fougasse) toastés, avec sofrito d'oignon et fenouil, rucula et tomate cherry.</div>
+          </div>
+          <div class="item-price">
+            9,10
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Friture du jour</div>
+            <div class="item-details">Demandez nous.</div>
+          </div>
+          <div class="item-price">
+            -
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Lanières de poulet sauce BBQ maison</div>
+            <div class="item-details">Lanières de poulet à l'andalouse, panées à la poudre de kiko, ey notre sauce barbecue.</div>
+          </div>
+          <div class="item-price">
+            6,70
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Oeuf parmentier</div>
+            <div class="item-details">Au fromage manchego.</div>
+          </div>
+          <div class="item-price">
+            4,80
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Oeuf parmentier</div>
+            <div class="item-details">A la sobrasada ibérique.</div>
+          </div>
+          <div class="item-price">
+            4,90
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Oeuf parmentier</div>
+            <div class="item-details">Au Jambon Ibérique.</div>
+          </div>
+          <div class="item-price">
+            5,60
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Oeuf parmentier Premium</div>
+            <div class="item-details">Au Jambon Ibérique et huile de truffe.</div>
+          </div>
+          <div class="item-price">
+            5,80
+          </div>
+        </div>
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Oeuf parmentier foie</div>
+            <div class="item-details">Au foie gras frais a la plancha.</div>
+          </div>
+          <div class="item-price">
+            9,20
+          </div>
+        </div>
+     
+      </div>
+
+      <div class="menu-section">
+        <h3>Viandes</h3>
+        
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Steak Tartare</div>
+            <div class="item-details">100gr. de viande de boeuf haché à la main, acompagné de petits toasts et chips de pomme de terre.</div>
+          </div>
+          <div class="item-price">
+            8
+          </div>
+        </div> 
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Foie poele</div>
+            <div class="item-details">Foie gras frais a la plancha avec fruit confit et pain d'épices.</div>
+          </div>
+          <div class="item-price">
+            13,50
+          </div>
+        </div> 
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Rubia Gallega</div>
+            <div class="item-details">200 gr. de boeuf de race Rubia Gallega (blonde galicienne) afinée 37 jours, cuite au grill. Acompagnée de parmentier y champignons de paris sautés.</div>
+          </div>
+          <div class="item-price">
+            15,90
+          </div>
+        </div> 
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Steak Tartare de Rubia Gallega</div>
+            <div class="item-details">150gr. de boeuf de race Rubia Gallega (blonde galicienne) haché à la main, acompagné de petits toasts et chips de pomme de terre.</div>
+          </div>
+          <div class="item-price">
+            14,90
+          </div>
+        </div> 
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Cochinita Pibil</div>
+            <div class="item-details">Viande de cochon de lait marinée et cuisson lente au four, avec oignon rouge, coriandre et citron vert. Accompagné de sauce “tatomada” (légumes au grill) et pain  de pita croustillant.</div>
+          </div>
+          <div class="item-price">
+            9,80
+          </div>
+        </div> 
+       
+      </div>
+      
+      <div class="menu-section">
+        <h3>Poissons</h3>
+        
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Tallarines de calamar</div>
+            <div class="item-details">Lamelles de calamar sautées à l'ail et à la ciboulette, accompagné d'un oeuf au plat.</div>
+          </div>
+          <div class="item-price">
+            9,90
+          </div>
+        </div> 
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Poulpe grillé</div>
+            <div class="item-details">100 gr. de poulpe au grill avec crême de celeri et caramel de cassis.</div>
+          </div>
+          <div class="item-price">
+            9,60
+          </div>
+        </div> 
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Risotto de gambas rouges</div>
+            <div class="item-details"></div>
+          </div>
+          <div class="item-price">
+            12,90
+          </div>
+        </div> 
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">Morue confite</div>
+            <div class="item-details">"Taco" de morue désalée à point, confite y accompagnée d'une creme de pomme et terre ave huile de sobrasada. Possibilité de remplacer l'huile de sobrasada pour une huile de fruits secs.</div>
+          </div>
+          <div class="item-price">
+            13,90
+          </div>
+        </div> 
+        <div class="menu-item">
+          <div class="item-desc">
+            <div class="item-name">"Fricandó" de turbot</div>
+            <div class="item-details">Fricassé de turbot avec pommes de terre, "moixernons" (champignon) et picada catalane (légumes hâchés).</div>
+          </div>
+          <div class="item-price">
+            17,90
+          </div>
+        </div> 
+       
+      </div>   
+      
+
+    </div>
+
+
+</section>
+
+<section id="story">
+  <h2><i class="fas fa-book-open"></i> <span>Découvrez El Tiet</span></h2>
+ 
+  <div><p>El Tiet sale de la mente de Ivan, nuestro chef (pero chhh, que no le gusta que le llamemos chef).</p> <p> blablabla 2017 bla....</p></p>Un lugar con el espiritu convivial, caloroso y desenfadado de una taverna, donde se puede disfrutar y descubrir platos y tapas tradicionales con un toque creativo, refinado, gastronomico, y sobre todo siempre hecho con cariño !</p><p>Solo o bien acompañado, sean lo que sean tus ganas del momento : tomar una caña con bravas, una fideua, un cochinillo o te sientes atravecido probar un pulpo con mermelada,sea tapas o plato, tradicional o creativo, comillon o pica pica, carne, pescado o verduras, el Tiet taver teca te da la bienvenida y de servira lo que pides,siempre hecho con cariño y gran respeto a los ingredientes, la gastronomia y a los amantes de buena comida.</p></div>
+</section>
+
+<section id="press">
+  <h2><i class="fas fa-glass-cheers"></i> <span>Ils parlent de nous</span></h2>
+
+  <ul>
+    <li><a rel="noopener nofollow" target="_blank" class="discreet" href="https://www.gastronomistas.com/restaurante-el-tiet-barcelona/" aria-label="Lire cet article sur El Tiet">
+      <strong><i class="fas fa-external-link-alt"></i> Gastronomistas</strong> 
+      <br>"Mi último gran descubrimiento: el restaurante El Tiet"
+    </a>
+  </li>
+
+  <li><a rel="noopener nofollow" target="_blank" class="discreet" href="https://culinarybackstreets.com/cities-category/barcelona/2014/el-tiet-taver-teca/" aria-label="Lire cet article sur El Tiet">
+    <strong><i class="fas fa-external-link-alt"></i> Culinarybackstreets</strong> 
+    <br>"El Tiet Taver Teca : Our favorite Uncle"
+  </a>
+</li>
+ 
+<li><a rel="noopener nofollow" target="_blank" class="discreet" href="http://brillat-savarin.blogspot.com/2015/05/el-tiet.html?m=1" aria-label="Lire cet article sur El Tiet">
+  <strong><i class="fas fa-external-link-alt"></i> Brillat-savarin</strong> 
+  <br>"En pocas palabras: Paradigma de la buena relación calidad-precio."
+</a>
+</li>
+
+<li><a rel="noopener nofollow" target="_blank" class="discreet" href="http://hedofoodia.blogspot.com/2018/09/el-tiet-taver-teca-barcelone.html?m=1" aria-label="Lire cet article sur El Tiet">
+  <strong><i class="fas fa-external-link-alt"></i> Hedofoodia</strong> 
+  <br>"Une très sympathique adresse pour des classiques améliorés, avec bien entendu plein d’autres mets délicats parfaitement cuisinés"
+</a>
+</li>
+
+<li><a rel="noopener nofollow" target="_blank" class="discreet" href="https://www.elperiodico.com/es/cata-mayor/20171130/mejores-patatas-bravas-restaurantes-barcelona-6453432" aria-label="Lire cet article sur El Tiet">
+  <strong><i class="fas fa-external-link-alt"></i> El periodico</strong> 
+  <br>"Las patatas mas bravas de Barcelona"
+</a>
+</li>
+
+   
+ </ul>
+</section>
+ 
+<section id="social">
+ <h2>Suivez El Tiet !</h2>
+ <p>Ne manquez pas les photos de nos platos, nos astuces de chef, concours, nouvelles importantes et menu du jour. El Tiet dans votre poche !</p>
+ <a target="_blank" rel="noopener nofollow" href="https://www.instagram.com/eltiet_382/" class="button" aria-label="Ouvrir l'Instagram d'El Tiet Taver Teca pour nous suivre"> <i class="fab fa-instagram"></i> eltiet_382</a>
+ <a target="_blank" rel="noopener nofollow" href class="button" aria-label="sections.social.FBbutton-text-alt"><i class="fab fa-facebook-square"></i> eltiettaverteca</a> 
+</section>
+  
+<section id="theend">Bon appétit !</section>
+</div>
+
+</body>
+<script>
+  "use strict";
+   if(navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1){
+
+   var scrollInterval ;
+     
+     const scrollToTarget = function(e) { 
+      e.preventDefault();
+      clearInterval(scrollInterval);
+      var scrollStep = 10;
+      const target = document.querySelector(this.hash);
+      var scrollDistance = target.offsetTop - window.scrollY ;
+      if(!scrollDistance)return;
+      
+      var direction  = scrollDistance > 0 ? 1 : -1;
+      scrollInterval = setInterval(() => { 
+
+        scrollStep +=scrollStep/8; // acceleration
+        if(Math.abs(scrollDistance) < scrollStep){
+          // TODO : deceleration
+          scrollStep= Math.abs(scrollDistance);  
+        }
+        
+        window.scrollTo(0,window.scrollY + direction*scrollStep);
+        
+        scrollDistance = target.offsetTop - window.scrollY ;
+        if(scrollDistance === 0){
+          console.log('stop')
+          clearInterval(scrollInterval);
+        }
+
+       },20); // 40 = 25IPS. Human eye. But not fluid. and speed not reliable
+     } 
+  
+     document.querySelectorAll("nav a").forEach(e => e.addEventListener('click',scrollToTarget,e));
+   }
+
+
+   document.querySelectorAll("nav a").forEach(e => {
+    var targetOffset = document.querySelector(e.hash).offsetTop;
+    e.setAttribute('data-target-scrollY', targetOffset);
+   })
+
+   var winLastScrollY = -1;
+   const menu = Array.from(document.querySelectorAll("nav a")).reverse();
+
+   const autoSelectMenuItem = () => { 
+    
+    if(winLastScrollY === window.scrollY)return;
+    winLastScrollY = window.scrollY;
+
+    for(let i=0;i<menu.length;i++){
+      const e = menu[i];
+      if(winLastScrollY >= e.getAttribute('data-target-scrollY')){
+        const currentHash = e.hash;
+        menu.filter(e => e.classList.contains("active") && e.hash !== currentHash).forEach(e=>e.classList.remove('active'));
+        e.classList.add('active');
+        break;
+      };
+    }
+
+   }
+
+  
+  var autoScrollAction= setInterval(autoSelectMenuItem,300); 
+  var manualScrollAction;
+
+  // When clicking on menu, remove this interval, and read it when done.
+  const manualSelectMenuItem = function(e) {
+    console.log('manual selection active');
+    clearInterval(autoScrollAction);
+    clearInterval(manualScrollAction);
+
+    const currentHash = this.hash;
+    menu.filter(e => e.classList.contains("active") && e.hash !== currentHash).forEach(e=>e.classList.remove('active'));
+        this.classList.add('active');
+
+    var winLastScrollY = window.scrollY;
+     manualScrollAction = setInterval(()=>{
+      if(winLastScrollY === window.scrollY){
+        console.log('auto selection active from manual selection func');
+        autoScrollAction = setInterval(autoSelectMenuItem,500); 
+        clearInterval(manualScrollAction);
+        // console.log(activeIntervals)
+      }
+      winLastScrollY = window.scrollY;
+    },100);
+  }
+
+  document.querySelectorAll("nav a").forEach(e => e.addEventListener('click',manualSelectMenuItem,e));
+
+  
+ </script>
+</html>
