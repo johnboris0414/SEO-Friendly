@@ -38,7 +38,7 @@
             "text-link": "Presse"
         },
         "social": {
-            "text-alt": "Joignez-vou à l'Instagram/Facebook d'El Tiet",
+            "text-alt": "Joignez-vous à l'Instagram/Facebook d'El Tiet",
             "text-link": "Suivez-nous"
         }
      
@@ -79,7 +79,7 @@
                     "desc":"aux copeaux de Parmesan."
                 },
                 "croc":{
-                    "name":"Croquete maison de ragoût",
+                    "name":"Croquete de ragoût maison",
                     "desc":"La pièce."
                 },
                 "burrata":{
@@ -96,26 +96,26 @@
                 },
                 "pollo":{
                     "name":"Lanières de poulet sauce BBQ maison",
-                    "desc":"Lanières de poulet à l'andalouse, panées à la poudre de kiko, ey notre sauce barbecue."
+                    "desc":"Lanières de poulet à l'andalouse, panées à la poudre de kiko, et notre sauce barbecue."
                 },
                 "huego":{
-                    "name":"Oeuf parmentier",
+                    "name":"Oeuf Parmentier",
                     "desc":"Au fromage manchego."
                 },
                 "hueda":{
-                    "name":"Oeuf parmentier",
+                    "name":"Oeuf Parmentier",
                     "desc":"A la sobrasada ibérique."
                 },
                 "huemon":{
-                    "name":"Oeuf parmentier",
+                    "name":"Oeuf Parmentier",
                     "desc":"Au Jambon Ibérique."
                 },
                 "huemium":{
-                    "name":"Oeuf parmentier Premium",
+                    "name":"Oeuf Parmentier Premium",
                     "desc":"Au Jambon Ibérique et huile de truffe."
                 },
                 "huefoie":{
-                    "name":"Oeuf parmentier foie",
+                    "name":"Oeuf Parmentier foie",
                     "desc":"Au foie gras frais a la plancha."
                 }
 
