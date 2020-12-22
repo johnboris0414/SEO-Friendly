@@ -570,96 +570,93 @@ src="assets/vid/el-tiet-presentation-bg.mp4"
 
 </body>
 <script>
-  "use strict";
-   if(navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1){
+  'use strict';
+  if (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) {
 
-   var scrollInterval ;
-     
-     const scrollToTarget = function(e) { 
+    var scrollInterval;
+  
+    const scrollToTarget = function (e) {
       e.preventDefault();
       clearInterval(scrollInterval);
       var scrollStep = 10;
       const target = document.querySelector(this.hash);
-      var scrollDistance = target.offsetTop - window.scrollY ;
-      if(!scrollDistance)return;
-      
-      var direction  = scrollDistance > 0 ? 1 : -1;
-      scrollInterval = setInterval(() => { 
+      var scrollDistance = target.offsetTop - window.scrollY;
+      if (!scrollDistance) return;
+  
+      var direction = scrollDistance > 0 ? 1 : -1;
+      scrollInterval = setInterval(() => {
 
-        scrollStep +=scrollStep/8; // acceleration
-        if(Math.abs(scrollDistance) < scrollStep){
+        scrollStep += scrollStep / 8; // acceleration
+        if (Math.abs(scrollDistance) < scrollStep) {
           // TODO : deceleration
-          scrollStep= Math.abs(scrollDistance);  
+          scrollStep = Math.abs(scrollDistance);
         }
-        
-        window.scrollTo(0,window.scrollY + direction*scrollStep);
-        
-        scrollDistance = target.offsetTop - window.scrollY ;
-        if(scrollDistance === 0){
-          console.log('stop')
+  
+        window.scrollTo(0,window.scrollY + direction * scrollStep);
+  
+        scrollDistance = target.offsetTop - window.scrollY;
+        if (scrollDistance === 0) {
+          console.log('stop');
           clearInterval(scrollInterval);
         }
 
-       },20); // 40 = 25IPS. Human eye. But not fluid. and speed not reliable
-     } 
+      },20); // 40 = 25IPS. Human eye. But not fluid. and speed not reliable
+    };
   
-     document.querySelectorAll("nav a").forEach(e => e.addEventListener('click',scrollToTarget,e));
-   }
+    document.querySelectorAll('nav a').forEach(e => e.addEventListener('click',scrollToTarget,e));
+  }
 
-
-   document.querySelectorAll("nav a").forEach(e => {
+  document.querySelectorAll('nav a').forEach(e => {
     var targetOffset = document.querySelector(e.hash).offsetTop;
-    e.setAttribute('data-target-scrollY', targetOffset);
-   })
+    e.setAttribute('data-target-scrollY',targetOffset);
+  });
 
-   var winLastScrollY = -1;
-   const menu = Array.from(document.querySelectorAll("nav a")).reverse();
+  var winLastScrollY = -1;
+  const menu = Array.from(document.querySelectorAll('nav a')).reverse();
 
-   const autoSelectMenuItem = () => { 
-    
-    if(winLastScrollY === window.scrollY)return;
+  const autoSelectMenuItem = () => {
+  
+    if (winLastScrollY === window.scrollY) return;
     winLastScrollY = window.scrollY;
 
-    for(let i=0;i<menu.length;i++){
+    for (let i = 0;i < menu.length;i++) {
       const e = menu[i];
-      if(winLastScrollY >= e.getAttribute('data-target-scrollY')){
+      if (winLastScrollY >= e.getAttribute('data-target-scrollY')) {
         const currentHash = e.hash;
-        menu.filter(e => e.classList.contains("active") && e.hash !== currentHash).forEach(e=>e.classList.remove('active'));
+        menu.filter(e => e.classList.contains('active') && e.hash !== currentHash).forEach(e=>e.classList.remove('active'));
         e.classList.add('active');
         break;
-      };
-    }
+      }
+  }
 
-   }
-
+  };
   
-  var autoScrollAction= setInterval(autoSelectMenuItem,300); 
+  var autoScrollAction = setInterval(autoSelectMenuItem,300);
   var manualScrollAction;
 
   // When clicking on menu, remove this interval, and read it when done.
-  const manualSelectMenuItem = function(e) {
+  const manualSelectMenuItem = function (e) {
     console.log('manual selection active');
     clearInterval(autoScrollAction);
     clearInterval(manualScrollAction);
 
     const currentHash = this.hash;
-    menu.filter(e => e.classList.contains("active") && e.hash !== currentHash).forEach(e=>e.classList.remove('active'));
-        this.classList.add('active');
+    menu.filter(e => e.classList.contains('active') && e.hash !== currentHash).forEach(e=>e.classList.remove('active'));
+    this.classList.add('active');
 
     var winLastScrollY = window.scrollY;
-     manualScrollAction = setInterval(()=>{
-      if(winLastScrollY === window.scrollY){
+    manualScrollAction = setInterval(()=>{
+      if (winLastScrollY === window.scrollY) {
         console.log('auto selection active from manual selection func');
-        autoScrollAction = setInterval(autoSelectMenuItem,500); 
+        autoScrollAction = setInterval(autoSelectMenuItem,500);
         clearInterval(manualScrollAction);
         // console.log(activeIntervals)
       }
       winLastScrollY = window.scrollY;
     },100);
-  }
+  };
 
-  document.querySelectorAll("nav a").forEach(e => e.addEventListener('click',manualSelectMenuItem,e));
-
+  document.querySelectorAll('nav a').forEach(e => e.addEventListener('click',manualSelectMenuItem,e));
   
  </script>
 </html>
