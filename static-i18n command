@@ -1,0 +1,3 @@
+static-i18n -l es -i es ./ -i fr -i en -o docs  --files index.html
+
+
