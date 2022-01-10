@@ -1,202 +1,203 @@
 {
-    "page": {
-        "lang": "es",
-        "metadesc": "Taverna gastronomica del eixample de Barcelona, con comida casera y creativa. Tambien takeaway (para llevar) y delivery (a domicilio)",
-        "title": "El Tiet Taver Teca - Taverna Gastronomica en Barcelona",
-        "logo":{
-            "text-alt":"logo El Tiet Taver teca"
+    "menu": {
+        "call-text-alt": "Llamanos para conocer el menu del dia",
+        "callus": "Llamanos",
+        "fish": {
+            "i": {
+                "bacalao": {
+                    "desc": "\"Taco\" de bacalao desalado en su punto, confitado y acompañado con un cremoso de patata y aceite de sobrasada.Opción vegetariana: cambia el aceite de sobrasada por un aceite de frutos secos.",
+                    "name": "Bacalao confitado"
+                },
+                "gamba": {
+                    "desc": "",
+                    "name": "Risotto de gamba roja"
+                },
+                "pulpo": {
+                    "desc": "100 gr. de pulpo a la parrilla con cremoso de celeri y caramelo de cassis.",
+                    "name": "Pulpo a la parrilla"
+                },
+                "rodaballo": {
+                    "desc": "Guisado de rodaballo con patatas, \"moixernons\" y picada catalana.",
+                    "name": "\"Fricandó\" de rodaballo"
+                },
+                "tallarines": {
+                    "desc": "Tiras de calamar salteadas con ajo y cebollino acompañadas con un huevo frito.",
+                    "name": "Tallarines de calamar"
+                }
+            },
+            "title": "Pescados"
         },
-        "lang-links":"<a aria-label=\"El Tiet en catala\"  href=\"/\">CAT</a> - <a class=\"active\" aria-label=\"El Tiet en español\" href=\"./\">ESP</a> - <a aria-label=\"El Tiet in inglish\" href=\"/en/\">EN</a> - <a aria-label=\"El Tiet en français\" href=\"/fr/\">FR</a>",
-        "welcome":"Bienvenido a El Tiet!",
-        "welcome-sub":"Taverna gastronomica",
-        "reviews":"reseñas",
-        "reviews-alt-text":"Ver reseñas del restaurante El Tiet en Google",
-        "modalities":"Restaurante - Takeaway - Delivery",
-        "city":"Barcelona",
-        "call-alt-text":"Llamar El Tiet para reservar tu mesa o cualquier duda.",
-        "email-alt-text":"Contacta a El Tiet Taver Teca por email.",
-
-        "opendays":"Martes-Sabado",
-        "opendays2": "Viernes y Sabado",
-        "map-text-alt":"Plan Google maps para ubicuar o llegar a El Tiet"
+        "ig-text-alt": "Mira el menu del dia en el Instagram de El Tiet Taver Teca",
+        "meat": {
+            "i": {
+                "foie": {
+                    "desc": "Foie fresco a la plancha con fruta confitada y pan de especias.",
+                    "name": "Foie poele"
+                },
+                "pibil": {
+                    "desc": "Carne de cerdo marinada y cocida lentamente al horno, con cebolla roja, cilantro y lima. Todo acompañado con salsa “tatomada” (verduras a la parrilla) y pan de pita crujiente.",
+                    "name": "Cochinita Pibil"
+                },
+                "rubia": {
+                    "desc": "200 gr. de ternera Rubia Gallega madurada 37 días a la parrilla. Acompañada de parmentier y champiñones salteados.",
+                    "name": "Rubia Gallega"
+                },
+                "tartare": {
+                    "desc": "100gr. de carne de ternera picada a mano, acompañado con tostaditas y chips de patata.",
+                    "name": "Steak Tartare"
+                },
+                "trubia": {
+                    "desc": "150gr. de Rubia Gallega cortada a mano para tartar y acompañada con chips y tostaditas.",
+                    "name": "Steak Tartare de Rubia Gallega"
+                }
+            },
+            "title": "Carnes"
+        },
+        "pica": {
+            "i": {
+                "anchoa": {
+                    "desc": "Unidad",
+                    "name": "Anchoas del Cantábrico con pan con tomate"
+                },
+                "bravas": {
+                    "desc": "Patata agria cortada a dados acompañadas con nuestras salsas.",
+                    "name": "Bravas \"El Tiet\""
+                },
+                "burrata": {
+                    "desc": "Opción vegetariana: sin jamón.",
+                    "name": "Burrata con aceite de tomate seco, jamón ibérico y frutos secos"
+                },
+                "cecina": {
+                    "desc": "Con virutas de queso Parmesano",
+                    "name": "Cecina de León"
+                },
+                "croc": {
+                    "desc": "Unidad",
+                    "name": "Croqueta casera de cocido"
+                },
+                "crocdia": {
+                    "desc": "Unidad",
+                    "name": "Croqueta del dia"
+                },
+                "fritura": {
+                    "desc": "Preguntanos",
+                    "name": "Fritura del dia"
+                },
+                "hueda": {
+                    "desc": "Con sobrasada ibérica.",
+                    "name": "Huevo parmentier"
+                },
+                "huefoie": {
+                    "desc": "Con foie fresco a la plancha.",
+                    "name": "Huevo parmentier con foie"
+                },
+                "huego": {
+                    "desc": "Con queso manchego.",
+                    "name": "Huevo parmentier"
+                },
+                "huemium": {
+                    "desc": "Con jamón ibérico y aceite de trufa.",
+                    "name": "Huevo parmentier Premium"
+                },
+                "huemon": {
+                    "desc": "Con Jamón Ibérico.",
+                    "name": "Huevo parmentier"
+                },
+                "hummus": {
+                    "desc": "El papadum es una chip elaborada con harina de garbanzo.",
+                    "name": "Hummus con papadum"
+                },
+                "jamon": {
+                    "desc": "50 gr. de jamón iberico con pan con tomate.",
+                    "name": "Jamón Ibérico con pan con tomate"
+                },
+                "pollo": {
+                    "desc": "Tiras de pollo a la andaluza con polvo de kiko y nuestra salsa barbacoa.",
+                    "name": "Tiras de pollo con salsa BBQ casera"
+                },
+                "provoleta": {
+                    "desc": "Al horno con fondant de puerro, bacon y chimichurri",
+                    "name": "Provoleta"
+                },
+                "salad": {
+                    "desc": "Patata, huevo duro, ventresca de atún, aceitunas, pimiento del piquillo, mayonesa y picos.",
+                    "name": "Ensaladilla Rusa"
+                },
+                "sardina": {
+                    "desc": "Pan de coca tostado con sofrito de cebolla e hinojo, rúcula y tomate cherry.",
+                    "name": "Coca de sardina ahumada"
+                }
+            },
+            "title": "Para picar"
+        },
+        "text": "El Tiet tambien propone un menu de mediodia entre semana, con pan bebida y postre, por 12,50.",
+        "text2": "o consultalo por nuestro",
+        "title": "Nuestra Carta"
     },
     "nav": {
-        "top": {
-            "text-alt": "vuelve al inicio, photos, ubicuacion y contacto de El Tiet",
-            "text-link": ""
+        "menu": {
+            "text-alt": "La carta de El Tiet",
+            "text-link": "Carta"
         },
         "reserve": {
             "text-alt": "Reservar en El Tiet",
             "text-link": "Reservar"
         },
-        "menu": {
-            "text-alt": "La carta de El Tiet",
-            "text-link": "Carta"
+        "social": {
+            "text-alt": "Unete al Instagram/Facebook de El Tiet",
+            "text-link": "Siguenos"
         },
         "story": {
             "text-alt": "Conoce a El Tiet, su cocinero y su historia",
             "text-link": "El Tiet ?"
         },
+        "top": {
+            "text-alt": "vuelve al inicio, photos, ubicuacion y contacto de El Tiet",
+            "text-link": ""
+        }
+    },
+    "page": {
+        "call-alt-text": "Llamar El Tiet para reservar tu mesa o cualquier duda.",
+        "city": "Barcelona",
+        "email-alt-text": "Contacta a El Tiet Taver Teca por email.",
+        "lang": "es",
+        "lang-links": "<a aria-label=\"El Tiet en catala\"  href=\"/\">CAT</a> - <a class=\"active\" aria-label=\"El Tiet en español\" href=\"./\">ESP</a> - <a aria-label=\"El Tiet in inglish\" href=\"/en/\">EN</a> - <a aria-label=\"El Tiet en français\" href=\"/fr/\">FR</a>",
+        "logo": {
+            "text-alt": "logo El Tiet Taver teca"
+        },
+        "map-text-alt": "Plan Google maps para ubicuar o llegar a El Tiet",
+        "metadesc": "Taverna gastronomica del eixample de Barcelona, con comida casera y creativa. Tambien takeaway (para llevar) y delivery (a domicilio)",
+        "modalities": "Restaurante - Takeaway - Delivery",
+        "opendays": "Martes-Sabado",
+        "opendays2": "Viernes y Sabado",
+        "reviews": "reseñas",
+        "reviews-alt-text": "Ver reseñas del restaurante El Tiet en Google",
+        "title": "El Tiet Taver Teca - Taverna Gastronomica en Barcelona",
+        "welcome": "Bienvenido a El Tiet!",
+        "welcome-sub": "Taverna gastronomica"
+    },
+    "sections": {
+        "press": {
+            "link-text-alt": "Leer este articulo sobre El Tiet",
+            "title": "Hablan de nosotros"
+        },
+        "reserve": {
+            "text": "",
+            "theforkModuleURL": "https://module.lafourchette.com/es_ES/module/214067-a50ab",
+            "title": "Reservar"
+        },
         "social": {
-            "text-alt": "Unete al Instagram/Facebook de El Tiet",
-            "text-link": "Siguenos"
-        }
-     
-    },
-    "menu":{
-        "title":"Nuestra Carta",
-        "text":"El Tiet tambien propone un menu de mediodia entre semana, con pan bebida y postre, por 11,50.",
-        "call-text-alt":"Llamanos para conocer el menu del dia",
-        "callus": "Llamanos",
-        "text2":"o consultalo por nuestro",
-        "ig-text-alt":"Mira el menu del dia en el Instagram de El Tiet Taver Teca",
-        "pica":{
-            "title":"Para picar",
-            "i":{
-                "bravas":{
-                    "name":"Bravas \"El Tiet\"",
-                    "desc":"Patata agria cortada a dados acompañadas con nuestras salsas."
-                },
-                "salad":{
-                    "name":"Ensaladilla Rusa",
-                    "desc":"Patata, huevo duro, ventresca de atún, aceitunas, pimiento del piquillo, mayonesa y picos."
-                },
-                "hummus":{
-                    "name":"Hummus con papadum",
-                    "desc":"El papadum es una chip elaborada con harina de garbanzo."
-                },
-                "anchoa":{
-                    "name":"Anchoas del Cantábrico con pan con tomate",
-                    "desc":"Unidad"
-                },
-
-                "jamon":{
-                    "name":"Jamón Ibérico con pan con tomate",
-                    "desc":"50 gr. de jamón iberico con pan con tomate."
-                },
-                "cecina":{
-                    "name":"Cecina de León",
-                    "desc":"Con virutas de queso Parmesano"
-                },
-                "croc":{
-                    "name":"Croqueta casera de cocido",
-                    "desc":"Unidad"
-                },
-                "burrata":{
-                    "name":"Burrata con aceite de tomate seco, jamón ibérico y frutos secos",
-                    "desc":"Opción vegetariana: sin jamón."
-                },
-                "sardina":{
-                    "name":"Coca de sardina ahumada",
-                    "desc":"Pan de coca tostado con sofrito de cebolla e hinojo, rúcula y tomate cherry."
-                },
-                "fritura":{
-                    "name":"Fritura del dia",
-                    "desc":"Preguntanos"
-                },
-                "pollo":{
-                    "name":"Tiras de pollo con salsa BBQ casera",
-                    "desc":"Tiras de pollo a la andaluza con polvo de kiko y nuestra salsa barbacoa."
-                },
-                "huego":{
-                    "name":"Huevo parmentier",
-                    "desc":"Con queso manchego."
-                },
-                "hueda":{
-                    "name":"Huevo parmentier",
-                    "desc":"Con sobrasada ibérica."
-                },
-                "huemon":{
-                    "name":"Huevo parmentier",
-                    "desc":"Con Jamón Ibérico."
-                },
-                "huemium":{
-                    "name":"Huevo parmentier Premium",
-                    "desc":"Con jamón ibérico y aceite de trufa."
-                },
-                "huefoie":{
-                    "name":"Huevo parmentier con foie",
-                    "desc":"Con foie fresco a la plancha."
-                }
-
-            }
+            "FBbutton-text-ale": "Abre el Facebook de El Tiet Taver Teca para seguirnos",
+            "IGbutton-text-alt": "Abre el Instagram de El Tiet Taver Teca para seguirnos",
+            "text": "Ne te pierdes fotos de nuestros platos con trucos de la receta, concursos, noticias importantes y el menu del dia. El Tiet siempre contigo !",
+            "title": "Sigue El Tiet !"
         },
-        "meat":{
-            "title":"Carnes",
-            "i":{
-                "tartare":{
-                    "name":"Steak Tartare",
-                    "desc":"100gr. de carne de ternera picada a mano, acompañado con tostaditas y chips de patata."
-                },
-                "foie":{
-                    "name":"Foie poele",
-                    "desc":"Foie fresco a la plancha con fruta confitada y pan de especias."
-                },
-                "rubia":{
-                    "name":"Rubia Gallega",
-                    "desc":"200 gr. de ternera Rubia Gallega madurada 37 días a la parrilla. Acompañada de parmentier y champiñones salteados."
-                },
-                "trubia":{
-                    "name":"Steak Tartare de Rubia Gallega",
-                    "desc":"150gr. de Rubia Gallega cortada a mano para tartar y acompañada con chips y tostaditas."
-                },
-                "pibil":{
-                    "name":"Cochinita Pibil",
-                    "desc":"Carne de cerdo marinada y cocida lentamente al horno, con cebolla roja, cilantro y lima. Todo acompañado con salsa “tatomada” (verduras a la parrilla) y pan de pita crujiente."
-                }
-            }
+        "story": {
+            "text": "<p>El Tiet sale de la mente de Ivan, nuestro chef (pero chhh, que no le gusta que le llamemos chef).</p> </p>Un lugar con el espiritu convivial, caloroso y desenfadado de una taverna, donde se puede disfrutar y descubrir platos y tapas tradicionales con un toque creativo, refinado, gastronomico, y sobre todo siempre hecho con cariño !</p><p>Solo o bien acompañado, sean lo que sean tus ganas del momento : tomar una caña con bravas, una fideua, un cochinillo o te sientes atravecido probar un pulpo con mermelada,sea tapas o plato, tradicional o creativo, comillon o pica pica, carne, pescado o verduras, el Tiet taver teca te da la bienvenida y de servira lo que pides,siempre hecho con cariño y gran respeto a los ingredientes, la gastronomia y a los amantes de buena comida.</p>",
+            "title": "Conoce a El Tiet"
         },
-        "fish":{
-            "title":"Pescados",
-            "i":{
-                "tallarines":{
-                    "name":"Tallarines de calamar",
-                    "desc":"Tiras de calamar salteadas con ajo y cebollino acompañadas con un huevo frito."
-                },
-                "pulpo":{
-                    "name":"Pulpo a la parrilla",
-                    "desc":"100 gr. de pulpo a la parrilla con cremoso de celeri y caramelo de cassis."
-                },
-                "gamba":{
-                    "name":"Risotto de gamba roja",
-                    "desc":""
-                },
-                "bacalao":{
-                    "name":"Bacalao confitado",
-                    "desc":"\"Taco\" de bacalao desalado en su punto, confitado y acompañado con un cremoso de patata y aceite de sobrasada.Opción vegetariana: cambia el aceite de sobrasada por un aceite de frutos secos."
-                },
-                "rodaballo":{
-                    "name":"\"Fricandó\" de rodaballo",
-                    "desc":"Guisado de rodaballo con patatas, \"moixernons\" y picada catalana."
-                }
-            }
-        }
-    },
-    "sections":{
-        "story":{
-            "title": "Conoce a El Tiet",
-            "text":"<p>El Tiet sale de la mente de Ivan, nuestro chef (pero chhh, que no le gusta que le llamemos chef).</p> </p>Un lugar con el espiritu convivial, caloroso y desenfadado de una taverna, donde se puede disfrutar y descubrir platos y tapas tradicionales con un toque creativo, refinado, gastronomico, y sobre todo siempre hecho con cariño !</p><p>Solo o bien acompañado, sean lo que sean tus ganas del momento : tomar una caña con bravas, una fideua, un cochinillo o te sientes atravecido probar un pulpo con mermelada,sea tapas o plato, tradicional o creativo, comillon o pica pica, carne, pescado o verduras, el Tiet taver teca te da la bienvenida y de servira lo que pides,siempre hecho con cariño y gran respeto a los ingredientes, la gastronomia y a los amantes de buena comida.</p>"
-        },
-        "reserve":{
-            "title": "Reservar",
-            "text":"",
-            "theforkModuleURL":"https://module.lafourchette.com/es_ES/module/214067-a50ab"
-        },
-        "press":{
-            "title": "Hablan de nosotros",
-            "link-text-alt":"Leer este articulo sobre El Tiet"
-        },
-        "social":{
-            "title": "Sigue El Tiet !",
-            "text":"Ne te pierdes fotos de nuestros platos con trucos de la receta, concursos, noticias importantes y el menu del dia. El Tiet siempre contigo !",
-            "IGbutton-text-alt":"Abre el Instagram de El Tiet Taver Teca para seguirnos",
-            "FBbutton-text-ale":"Abre el Facebook de El Tiet Taver Teca para seguirnos"
-        },
-        "theend":{
-            "text":"Buen provecho !"
+        "theend": {
+            "text": "Buen provecho !"
         }
     }
-
-   
- 
 }
