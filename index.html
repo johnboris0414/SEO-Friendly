@@ -228,6 +228,16 @@
       margin-bottom: 1em
     }
 
+    a.button.whatsapp {
+      /* background-color: #25D366;*/
+      color: white;
+      background-image: url(../docs/assets/img/whatsapp-128.png);
+      background-position: 5px center;
+      background-size: 32px;
+      background-repeat: no-repeat;
+      padding-left: 40px;
+    }
+
     #map {
       height: 30vw
     }
@@ -242,7 +252,8 @@
     }
 
     #address .call,
-    #address .mail {
+    #address .mail,
+    #address .whatsapp {
       margin-top: 1em;
       margin-right: 1em;
     }
@@ -360,6 +371,14 @@
       section h2 {
         padding-top: 3em
       }
+
+      a.button.whatsapp {
+
+        background-position: 12px center;
+        padding-left: 48px;
+      }
+
+
     }
 
     @media all and (max-width:360px) {
@@ -424,7 +443,11 @@
         <i class="fas fa-map-marker-alt"></i> Calle Corsega 382
         <span class="address-line">08037 <span data-t>page.city</span></span>
 
-        <br /><a aria-label-t="page.call-alt-text" class="button call" href="tel:+34931410583" data-attr-t>931 41 05
+        <br />
+        <a aria-label-t="page.call-alt-text" class="button whatsapp"
+          href="https://api.whatsapp.com/send/?phone=0034931410583" data-attr-t>Whatsapp</a>
+
+        <a aria-label-t="page.call-alt-text" class="button call" href="tel:+34931410583" data-attr-t>931 41 05
           83</a> <a aria-label-t="page.email-alt-text" class="button mail" target="_blank" rel="noopener"
           href="mailto:info@eltiettaverteca.com" data-attr-t>info@eltiettaverteca.com</a>
         <br />
