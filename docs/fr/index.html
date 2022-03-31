@@ -228,6 +228,16 @@
       margin-bottom: 1em
     }
 
+    a.button.whatsapp {
+      /* background-color: #25D366;*/
+      color: white;
+      background-image: url(../docs/assets/img/whatsapp-128.png);
+      background-position: 5px center;
+      background-size: 32px;
+      background-repeat: no-repeat;
+      padding-left: 40px;
+    }
+
     #map {
       height: 30vw
     }
@@ -242,9 +252,28 @@
     }
 
     #address .call,
-    #address .mail {
+    #address .mail,
+    #address .whatsapp {
       margin-top: 1em;
       margin-right: 1em;
+    }
+
+    #float-whatsapp {
+      position: fixed;
+      width: 100%;
+      bottom: 90px;
+      margin: 0 -1.5em;
+    }
+
+    #float-whatsapp .whatsapp {
+      background-color: #25D366;
+      width: 50px;
+      height: 50px;
+
+      background-position: center;
+      background-size: 30px;
+      float: right;
+
     }
 
     #social .button {
@@ -360,6 +389,28 @@
       section h2 {
         padding-top: 3em
       }
+
+      a.button.whatsapp {
+
+        background-position: 12px center;
+        padding-left: 48px;
+      }
+
+      #float-whatsapp {
+        width: 769px;
+        bottom: 20px;
+        margin: 0 -1em;
+      }
+
+      #float-whatsapp .whatsapp {
+        width: 70px;
+        height: 70px;
+        background-size: 50px;
+        margin-right: 20px;
+
+      }
+
+
     }
 
     @media all and (max-width:360px) {
@@ -406,13 +457,13 @@
           <h1>Bienvenue à El Tiet!</h1>
           <p>Taverne gastronomique</p>
           <p class="reviews">4,4 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-            <a target="_blank" rel="noopener" class="discreet" href="https://g.co/kgs/s7Y23S" aria-label="Voir les avis Google du restaurant El Tiet">441 <span>avis</span> <i class="fas fa-external-link-alt"></i></a>
+            <a target="_blank" rel="noopener" class="discreet" href="https://g.co/kgs/s7Y23S" aria-label="Voir les avis Google du restaurant El Tiet">459 <span>avis</span> <i class="fas fa-external-link-alt"></i></a>
           </p>
         </div>
       </div>
     </header>
 
-    <section id="modalities">Restaurant - A emporter - A domicile</section>
+    <section id="modalities">Restaurant - A emporter</section>
 
     <section id="address">
       <coords>
@@ -420,14 +471,18 @@
         <i class="fas fa-map-marker-alt"></i> Calle Corsega 382
         <span class="address-line">08037 <span>Barcelone</span></span>
 
-        <br><a class="button call" href="tel:+34931410583" aria-label="Appeler El Tiet pour réserver votre table, ou poser une question.">931 41 05
+        <br>
+        <a class="button whatsapp" target="_blank" rel="noopener" href="https://api.whatsapp.com/send/?phone=0034931410583" aria-label="Appeler El Tiet pour réserver votre table, ou poser une question.">Whatsapp</a>
+
+        <a class="button call" href="tel:+34931410583" aria-label="Appeler El Tiet pour réserver votre table, ou poser une question.">931 41 05
           83</a> <a class="button mail" target="_blank" rel="noopener" href="mailto:info@eltiettaverteca.com" aria-label="Contacter El Tiet Taver Teca par email.">info@eltiettaverteca.com</a>
         <br>
       </coords>
     </section>
 
     <section id="horarios">
-      <i class="fas fa-clock"></i> <span>Mardi-Samedi</span> 13h-15h30 <br>
+      <i class="fas fa-clock"></i> <span>Mardi-Samedi</span> 13h-15h30 &nbsp;&nbsp;&nbsp; 20h-22h30<br>
+      <i class="fas fa-clock" style="visibility: hidden;"></i> <span>Vendredi et Samedi</span> <span>jusqu'à</span> 23h.
     </section>
 
     <section id="map">
@@ -749,6 +804,10 @@
     </section>
 
     <section id="theend">Bon appétit !</section>
+
+    <div id="float-whatsapp">
+      <a class="button whatsapp" target="_blank" rel="noopener" href="https://api.whatsapp.com/send/?phone=0034931410583" aria-label="Appeler El Tiet pour réserver votre table, ou poser une question."></a>
+    </div>
   </div>
 
 </body>
