@@ -849,18 +849,22 @@
 
     var scrollInterval;
 
+
+    let scrollInterval;
+
     const scrollToTarget = function (e) {
       e.preventDefault();
-      clearInterval(scrollInterval);
+      if (scrollInterval) cancelAnimationFrame(scrollInterval);
       var scrollStep = 10;
       const target = document.querySelector(this.hash);
       var scrollDistance = target.offsetTop - window.scrollY;
       if (!scrollDistance) return;
 
       var direction = scrollDistance > 0 ? 1 : -1;
-      scrollInterval = setInterval(() => {
 
+      const animateScroll = () => {
         scrollStep += scrollStep / 8; // acceleration
+
         if (Math.abs(scrollDistance) < scrollStep) {
           // TODO : deceleration
           scrollStep = Math.abs(scrollDistance);
@@ -869,13 +873,45 @@
         window.scrollTo(0, window.scrollY + direction * scrollStep);
 
         scrollDistance = target.offsetTop - window.scrollY;
-        if (scrollDistance === 0) {
+        if (scrollDistance !== 0) {
+          scrollInterval = requestAnimationFrame(animateScroll);
+        } else {
           console.log('stop');
-          clearInterval(scrollInterval);
         }
+      };
 
-      }, 20); // 40 = 25IPS. Human eye. But not fluid. and speed not reliable
+      scrollInterval = requestAnimationFrame(animateScroll);
     };
+
+
+
+    // const scrollToTarget = function (e) {
+    //   e.preventDefault();
+    //   clearInterval(scrollInterval);
+    //   var scrollStep = 10;
+    //   const target = document.querySelector(this.hash);
+    //   var scrollDistance = target.offsetTop - window.scrollY;
+    //   if (!scrollDistance) return;
+
+    //   var direction = scrollDistance > 0 ? 1 : -1;
+    //   scrollInterval = setInterval(() => {
+
+    //     scrollStep += scrollStep / 8; // acceleration
+    //     if (Math.abs(scrollDistance) < scrollStep) {
+    //       // TODO : deceleration
+    //       scrollStep = Math.abs(scrollDistance);
+    //     }
+
+    //     window.scrollTo(0, window.scrollY + direction * scrollStep);
+
+    //     scrollDistance = target.offsetTop - window.scrollY;
+    //     if (scrollDistance === 0) {
+    //       console.log('stop');
+    //       clearInterval(scrollInterval);
+    //     }
+
+    //   }, 20); // 40 = 25IPS. Human eye. But not fluid. and speed not reliable
+    // };
 
     document.querySelectorAll('nav a').forEach(e => e.addEventListener('click', scrollToTarget, e));
   }
