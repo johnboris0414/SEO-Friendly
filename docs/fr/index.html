@@ -510,7 +510,7 @@
               <div class="item-details">Patatas bravas, coupées en dés et acompagnées de nos sauces.</div>
             </div>
             <div class="item-price">
-              5,70
+              5,90
             </div>
           </div>
           <div class="menu-item">
@@ -519,7 +519,7 @@
               <div class="item-details">Pommes de terre, oeufs durs, ventrèche de thon, olives, petits poivrons "pimiento del piquillo", mayonnaise et picos (pain).</div>
             </div>
             <div class="item-price">
-              5,50
+              6,10
             </div>
           </div>
           <div class="menu-item">
@@ -556,7 +556,7 @@
               <div class="item-details">aux copeaux de Parmesan.</div>
             </div>
             <div class="item-price">
-              9,50
+              9,90
             </div>
           </div>
           <div class="menu-item">
@@ -601,7 +601,7 @@
               <div class="item-details">Demandez nous.</div>
             </div>
             <div class="item-price">
-              6,90
+              8,90
             </div>
           </div>
           <div class="menu-item">
@@ -619,7 +619,7 @@
               <div class="item-details">Au four, avec fondant de poireau, bacon et sauce chimichurri.</div>
             </div>
             <div class="item-price">
-              9,90
+              10,50
             </div>
           </div>
           <div class="menu-item">
@@ -658,15 +658,17 @@
               5,80
             </div>
           </div>
+          <!--
           <div class="menu-item">
             <div class="item-desc">
-              <div class="item-name">Oeuf Parmentier foie</div>
-              <div class="item-details">Au foie gras frais a la plancha.</div>
+              <div class="item-name" data-t>menu.pica.i.huefoie.name</div>
+              <div class="item-details" data-t>menu.pica.i.huefoie.desc</div>
             </div>
             <div class="item-price">
               9,20
             </div>
           </div>
+        -->
 
         </div>
 
@@ -682,15 +684,17 @@
               8,50
             </div>
           </div>
+          <!--
           <div class="menu-item">
             <div class="item-desc">
-              <div class="item-name">Foie poele</div>
-              <div class="item-details">Foie gras frais a la plancha avec fruit confit et pain d'épices.</div>
+              <div class="item-name" data-t>menu.meat.i.foie.name</div>
+              <div class="item-details" data-t>menu.meat.i.foie.desc</div>
             </div>
             <div class="item-price">
               13,90
             </div>
           </div>
+          -->
           <div class="menu-item">
             <div class="item-desc">
               <div class="item-name">Rubia Gallega</div>
@@ -747,7 +751,7 @@
               <div class="item-details">"Taco" de morue désalée à point, confite y accompagnée d'une creme de pomme et terre ave huile de sobrasada. Possibilité de remplacer l'huile de sobrasada pour une huile de fruits secs.</div>
             </div>
             <div class="item-price">
-              13,90
+              15,90
             </div>
           </div>
         </div>
@@ -817,18 +821,22 @@
 
     var scrollInterval;
 
+
+    let scrollInterval;
+
     const scrollToTarget = function (e) {
       e.preventDefault();
-      clearInterval(scrollInterval);
+      if (scrollInterval) cancelAnimationFrame(scrollInterval);
       var scrollStep = 10;
       const target = document.querySelector(this.hash);
       var scrollDistance = target.offsetTop - window.scrollY;
       if (!scrollDistance) return;
 
       var direction = scrollDistance > 0 ? 1 : -1;
-      scrollInterval = setInterval(() => {
 
+      const animateScroll = () => {
         scrollStep += scrollStep / 8; // acceleration
+
         if (Math.abs(scrollDistance) < scrollStep) {
           // TODO : deceleration
           scrollStep = Math.abs(scrollDistance);
@@ -837,13 +845,45 @@
         window.scrollTo(0, window.scrollY + direction * scrollStep);
 
         scrollDistance = target.offsetTop - window.scrollY;
-        if (scrollDistance === 0) {
+        if (scrollDistance !== 0) {
+          scrollInterval = requestAnimationFrame(animateScroll);
+        } else {
           console.log('stop');
-          clearInterval(scrollInterval);
         }
+      };
 
-      }, 20); // 40 = 25IPS. Human eye. But not fluid. and speed not reliable
+      scrollInterval = requestAnimationFrame(animateScroll);
     };
+
+
+
+    // const scrollToTarget = function (e) {
+    //   e.preventDefault();
+    //   clearInterval(scrollInterval);
+    //   var scrollStep = 10;
+    //   const target = document.querySelector(this.hash);
+    //   var scrollDistance = target.offsetTop - window.scrollY;
+    //   if (!scrollDistance) return;
+
+    //   var direction = scrollDistance > 0 ? 1 : -1;
+    //   scrollInterval = setInterval(() => {
+
+    //     scrollStep += scrollStep / 8; // acceleration
+    //     if (Math.abs(scrollDistance) < scrollStep) {
+    //       // TODO : deceleration
+    //       scrollStep = Math.abs(scrollDistance);
+    //     }
+
+    //     window.scrollTo(0, window.scrollY + direction * scrollStep);
+
+    //     scrollDistance = target.offsetTop - window.scrollY;
+    //     if (scrollDistance === 0) {
+    //       console.log('stop');
+    //       clearInterval(scrollInterval);
+    //     }
+
+    //   }, 20); // 40 = 25IPS. Human eye. But not fluid. and speed not reliable
+    // };
 
     document.querySelectorAll('nav a').forEach(e => e.addEventListener('click', scrollToTarget, e));
   }
