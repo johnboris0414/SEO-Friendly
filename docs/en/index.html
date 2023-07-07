@@ -817,14 +817,15 @@
 </body>
 <script>
   'use strict';
-  if (navigator.userAgent.indexOf('Safari') !== -1 && navigator.userAgent.indexOf('Chrome') === -1) {
+  // doesn't work on safari
+  if (/*navigator.userAgent.indexOf('Safari') !== -1 && */ navigator.userAgent.indexOf('Chrome') === -1) {
 
     let scrollInterval;
 
     const scrollToTarget = function (e) {
       e.preventDefault();
       if (scrollInterval) cancelAnimationFrame(scrollInterval);
-      var scrollStep = 10;
+      var scrollStep = 20;
       const target = document.querySelector(this.hash);
       var scrollDistance = target.offsetTop - window.scrollY;
       if (!scrollDistance) return;
